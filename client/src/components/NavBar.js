@@ -163,36 +163,24 @@ export default function PrimarySearchAppBar() {
 
 	return (
 		<div className={classes.grow}>
-			<AppBar position="static">
-				<Toolbar
-					style={{
-						backgroundColor: "#000000",
-					}}
-				>
-					<IconButton
-						edge="start"
-						className={classes.menuButton}
-						color="inherit"
-						aria-label="open drawer"
+			<AppBar
+				position="static"
+				style={{
+					backgroundColor: "#000000",
+					borderRadius: "10px",
+				}}
+			>
+				<Toolbar>
+					<Typography
+						className={classes.title}
+						variant="h4"
+						noWrap
+						style={{
+							fontFamily: "Zen Dots",
+						}}
 					>
-						<MenuIcon />
-					</IconButton>
-					<Typography className={classes.title} variant="h6" noWrap>
-						Brewery Finder
+						BrewCrew
 					</Typography>
-					<div className={classes.search}>
-						<div className={classes.searchIcon}>
-							<SearchIcon />
-						</div>
-						<InputBase
-							placeholder="Search…"
-							classes={{
-								root: classes.inputRoot,
-								input: classes.inputInput,
-							}}
-							inputProps={{ "aria-label": "search" }}
-						/>
-					</div>
 					<div className={classes.grow} />
 					<div className={classes.sectionDesktop}>
 						<IconButton aria-label="show 4 new mails" color="inherit">
