@@ -164,7 +164,11 @@ export default function PrimarySearchAppBar() {
 	return (
 		<div className={classes.grow}>
 			<AppBar position="static">
-				<Toolbar>
+				<Toolbar
+					style={{
+						backgroundColor: "#000000",
+					}}
+				>
 					<IconButton
 						edge="start"
 						className={classes.menuButton}
@@ -174,7 +178,7 @@ export default function PrimarySearchAppBar() {
 						<MenuIcon />
 					</IconButton>
 					<Typography className={classes.title} variant="h6" noWrap>
-						Material-UI
+						Brewery Finder
 					</Typography>
 					<div className={classes.search}>
 						<div className={classes.searchIcon}>
