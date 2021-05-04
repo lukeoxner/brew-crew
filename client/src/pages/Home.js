@@ -2,7 +2,7 @@ import React from "react";
 import { Button, makeStyles, Container } from "@material-ui/core";
 import { useAuth0 } from "@auth0/auth0-react";
 import { Link } from "react-router-dom";
-import Background from "../images/girls-with-beers.jpg";
+import Background from "../images/beer-on-beach.jpg";
 import Typography from "@material-ui/core/Typography";
 import Landing from "./Landing";
 
@@ -50,9 +50,9 @@ function Home() {
 						className={classes.root}
 						style={{
 							position: "absolute",
-							bottom: "30%",
+							bottom: "60%",
 							left: "10%",
-							width: "35%",
+							width: "50%",
 							maxHeight: "90",
 							marginTop: "2rem",
 							backgroundColor: `rgba(0,0,0,.0)`,
@@ -62,7 +62,7 @@ function Home() {
 					>
 						<Typography
 							style={{
-								fontSize: "4.0rem",
+								fontSize: "3.0rem",
 								fontWeight: "600",
 								textShadow: "2px 2px #000000",
 								textAlign: "left",
