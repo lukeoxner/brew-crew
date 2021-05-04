@@ -4,6 +4,7 @@ import { useAuth0 } from "@auth0/auth0-react";
 import { Link } from "react-router-dom";
 import Background from "../images/beer-on-beach.jpg";
 import Typography from "@material-ui/core/Typography";
+import Landing from "./Landing";
 
 const useStyles = makeStyles({
 	root: {
@@ -25,71 +26,75 @@ const useStyles = makeStyles({
 	},
 });
 
-function Landing() {
+function Home() {
 	const classes = useStyles();
-	const { loginWithRedirect } = useAuth0();
+	const { loginWithRedirect, isAuthenticated } = useAuth0();
 
-	return (
-		<>
-			<div
-				container
-				style={{
-					position: "relative",
-					backgroundImage: `linear-gradient(to left, rgba(000, 000, 000, 0), rgba(000, 000, 000, 0.70)), url(${Background})`,
-					width: "100",
-					height: "100vh",
-					backgroundRepeat: "no-repeat",
-					backgroundSize: "cover",
-					backgroundPosition: "center center",
-					backgroundAttachment: "fixed",
-					overflow: "hidden",
-				}}
-			>
-				<Container
-					className={classes.root}
+	if (isAuthenticated) {
+		return (
+			<>
+				<div
+					container
 					style={{
-						position: "absolute",
-						bottom: "30%",
-						left: "10%",
-						width: "35%",
-						maxHeight: "90",
-						marginTop: "2rem",
-						backgroundColor: `rgba(0,0,0,.0)`,
-						color: "white",
+						position: "relative",
+						backgroundImage: `linear-gradient(to left, rgba(000, 000, 000, 0), rgba(000, 000, 000, 0.70)), url(${Background})`,
+						width: "100",
+						height: "100vh",
+						backgroundRepeat: "no-repeat",
+						backgroundSize: "cover",
+						backgroundPosition: "center center",
+						backgroundAttachment: "fixed",
 						overflow: "hidden",
 					}}
 				>
-					<Typography
+					<Container
+						className={classes.root}
 						style={{
-							fontSize: "2.5rem",
-							textShadow: "2px 2px #000000",
-							textAlign: "left",
+							position: "absolute",
+							bottom: "30%",
+							left: "10%",
+							width: "35%",
+							maxHeight: "90",
+							marginTop: "2rem",
+							backgroundColor: `rgba(0,0,0,.0)`,
+							color: "white",
+							overflow: "hidden",
 						}}
-					>
-						<h3>Welcome back to BrewCrew!</h3>
-					</Typography>
-					<Button
-						variant="outlined"
-						style={{ borderColor: "#f1a922" }}
-						onClick={() => loginWithRedirect()}
 					>
 						<Typography
 							style={{
-								color: "#f1a922",
-								textDecoration: "none",
-								fontSize: "1rem",
-								position: "relative",
-								fontStyle: "italic",
-								fontWeight: "500",
+								fontSize: "2.5rem",
+								textShadow: "2px 2px #000000",
+								textAlign: "left",
 							}}
 						>
-							Sign Up / Log In
+							<h3>Welcome back to BrewCrew!</h3>
 						</Typography>
-					</Button>
-				</Container>
-			</div>
-		</>
-	);
+						<Button
+							variant="outlined"
+							style={{ borderColor: "#f1a922" }}
+							onClick={() => loginWithRedirect()}
+						>
+							<Typography
+								style={{
+									color: "#f1a922",
+									textDecoration: "none",
+									fontSize: "1rem",
+									position: "relative",
+									fontStyle: "italic",
+									fontWeight: "500",
+								}}
+							>
+								Sign Up / Log In
+							</Typography>
+						</Button>
+					</Container>
+				</div>
+			</>
+		);
+	} else {
+		return <Landing />;
+	}
 }
 
-export default Landing;
+export default Home;

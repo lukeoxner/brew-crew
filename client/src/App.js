@@ -20,6 +20,10 @@ function App() {
 					<Route exact path={"/"}>
 						{isAuthenticated ? <Home /> : <Landing />}
 					</Route>
+					<Route exact path={"/home"}>
+						{/* {isAuthenticated ? <Home /> : <Landing />} */}
+						<Home />
+					</Route>
 				</Switch>
 			</Router>
 		</div>

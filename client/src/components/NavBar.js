@@ -158,7 +158,31 @@ export default function PrimarySearchAppBar() {
 								fontSize: "1.2rem",
 							}}
 						>
-							Beer
+							Search
+						</Link>
+						<Link
+							to=""
+							style={{
+								color: "#ffffff",
+								textDecoration: "none",
+								marginRight: "2rem",
+								fontWeight: "500",
+								fontSize: "1.2rem",
+							}}
+						>
+							Our Picks
+						</Link>
+						<Link
+							to=""
+							style={{
+								color: "#ffffff",
+								textDecoration: "none",
+								marginRight: "2rem",
+								fontWeight: "500",
+								fontSize: "1.2rem",
+							}}
+						>
+							About
 						</Link>
 						<IconButton
 							edge="end"
