@@ -34,7 +34,6 @@ function Home() {
 		return (
 			<>
 				<div
-					container
 					style={{
 						position: "relative",
 						backgroundImage: `linear-gradient(to left, rgba(000, 000, 000, 0), rgba(000, 000, 000, 0.70)), url(${Background})`,

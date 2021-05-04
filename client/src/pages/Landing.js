@@ -32,7 +32,6 @@ function Landing() {
 	return (
 		<>
 			<div
-				container
 				style={{
 					position: "relative",
 					backgroundImage: `linear-gradient(to left, rgba(000, 000, 000, 0), rgba(000, 000, 000, 0.90)), url(${Background})`,
