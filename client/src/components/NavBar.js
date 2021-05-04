@@ -91,7 +91,7 @@ export default function PrimarySearchAppBar() {
 		>
 			<MenuItem onClick={handleMenuClose}>
 				<Link
-					to=""
+					to="/profile"
 					style={{
 						color: "#000000",
 						textDecoration: "none",

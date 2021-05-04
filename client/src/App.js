@@ -3,6 +3,7 @@ import { useAuth0 } from "@auth0/auth0-react";
 import NavBar from "./components/NavBar";
 import Landing from "./pages/Landing";
 import Home from "./pages/Home";
+import Profile from "./pages/Profile";
 import Loading from "./components/Loading";
 
 function App() {
@@ -23,6 +24,9 @@ function App() {
 					<Route exact path={"/home"}>
 						{/* {isAuthenticated ? <Home /> : <Landing />} */}
 						<Home />
+					</Route>
+					<Route exact path={"/profile"}>
+						<Profile />
 					</Route>
 				</Switch>
 			</Router>
