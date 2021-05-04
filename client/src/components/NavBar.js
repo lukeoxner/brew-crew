@@ -10,6 +10,7 @@ import Badge from "@material-ui/core/Badge";
 import MenuItem from "@material-ui/core/MenuItem";
 import Menu from "@material-ui/core/Menu";
 import AccountCircle from "@material-ui/icons/AccountCircle";
+import AccountThumbnail from "./AccountThumbnail";
 import MailIcon from "@material-ui/icons/Mail";
 import NotificationsIcon from "@material-ui/icons/Notifications";
 import MoreIcon from "@material-ui/icons/MoreVert";
@@ -100,17 +101,8 @@ export default function PrimarySearchAppBar() {
 			open={isMobileMenuOpen}
 			onClose={handleMobileMenuClose}
 		>
-			<MenuItem onClick={handleProfileMenuOpen}>
-				<IconButton
-					aria-label="account of current user"
-					aria-controls="primary-search-account-menu"
-					aria-haspopup="true"
-					color="inherit"
-				>
-					<AccountCircle />
-				</IconButton>
-				<p>Profile</p>
-			</MenuItem>
+			<MenuItem onClick={handleMenuClose}>Profile</MenuItem>
+			<MenuItem onClick={handleMenuClose}>My account</MenuItem>
 		</Menu>
 	);
 
@@ -192,7 +184,7 @@ export default function PrimarySearchAppBar() {
 							onClick={handleProfileMenuOpen}
 							color="inherit"
 						>
-							<AccountCircle style={{ fontSize: "2.5rem" }} />
+							<AccountThumbnail />
 						</IconButton>
 					</div>
 					<div className={classes.sectionMobile}>
