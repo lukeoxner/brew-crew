@@ -141,13 +141,12 @@ export default function PrimarySearchAppBar() {
 				position="fixed"
 				style={{
 					backgroundColor: "#000000",
-					// borderRadius: "10px",
 				}}
 			>
 				<Toolbar>
 					<Typography
 						className={classes.title}
-						variant="h4"
+						variant="h5"
 						noWrap
 						style={{
 							fontFamily: "Zen Dots",

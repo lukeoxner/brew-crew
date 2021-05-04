@@ -50,7 +50,39 @@ function Landing() {
 					backgroundAttachment: "fixed",
 					overflow: "hidden",
 				}}
-			></div>
+			>
+				<Card
+					className={classes.root}
+					style={{
+						position: "absolute",
+						bottom: "20%",
+						left: "5%",
+						width: "35%",
+						backgroundColor: `rgba(0,0,0,.0)`,
+						color: "white",
+						maxHeight: "55%",
+						overflow: "auto",
+					}}
+					variant="outlined"
+				>
+					<CardContent>
+						<Typography>
+							<h3>
+								<b>BrewCrew</b> is your key to finding great breweries.
+							</h3>
+						</Typography>
+					</CardContent>
+					<CardActions>
+						<Link
+							size="small"
+							to="/login"
+							style={{ textDecoration: "none", color: "violet" }}
+						>
+							Sign up today
+						</Link>
+					</CardActions>
+				</Card>
+			</div>
 		</>
 	);
 }
