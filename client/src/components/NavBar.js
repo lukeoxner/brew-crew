@@ -182,7 +182,7 @@ export default function PrimarySearchAppBar() {
 								fontSize: "1.2rem",
 							}}
 						>
-							Search
+							Find Breweries
 						</Link>
 						<Link
 							to=""

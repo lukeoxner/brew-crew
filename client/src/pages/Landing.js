@@ -2,7 +2,7 @@ import React from "react";
 import { Button, makeStyles, Container } from "@material-ui/core";
 import { useAuth0 } from "@auth0/auth0-react";
 import { Link } from "react-router-dom";
-import Background from "../images/beer-on-beach.jpg";
+import Background from "../images/girls-with-beers.jpg";
 import Typography from "@material-ui/core/Typography";
 
 const useStyles = makeStyles({
@@ -35,7 +35,7 @@ function Landing() {
 				container
 				style={{
 					position: "relative",
-					backgroundImage: `linear-gradient(to left, rgba(000, 000, 000, 0), rgba(000, 000, 000, 0.70)), url(${Background})`,
+					backgroundImage: `linear-gradient(to left, rgba(000, 000, 000, 0), rgba(000, 000, 000, 0.90)), url(${Background})`,
 					width: "100",
 					height: "100vh",
 					backgroundRepeat: "no-repeat",
@@ -49,9 +49,9 @@ function Landing() {
 					className={classes.root}
 					style={{
 						position: "absolute",
-						bottom: "30%",
-						left: "10%",
-						width: "35%",
+						bottom: "25%",
+						left: "7%",
+						width: "50%",
 						maxHeight: "90",
 						marginTop: "2rem",
 						backgroundColor: `rgba(0,0,0,.0)`,
@@ -66,7 +66,10 @@ function Landing() {
 							textAlign: "left",
 						}}
 					>
-						<h3>BrewCrew is your key to finding great breweries nearby.</h3>
+						<h3>
+							BrewCrew helps you find great local breweries, and meet cool
+							people to go enjoy them with!
+						</h3>
 					</Typography>
 					<Button
 						variant="outlined"
@@ -83,7 +86,7 @@ function Landing() {
 								fontWeight: "500",
 							}}
 						>
-							Sign Up / Log In
+							Join the Crew
 						</Typography>
 					</Button>
 				</Container>
