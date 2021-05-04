@@ -5,6 +5,7 @@ import Landing from "./pages/Landing";
 import Home from "./pages/Home";
 import Profile from "./pages/Profile";
 import Loading from "./components/Loading";
+import Search from "./pages/Search";
 
 function App() {
 	const { user, isAuthenticated, isLoading } = useAuth0();
@@ -27,6 +28,9 @@ function App() {
 					</Route>
 					<Route exact path={"/profile"}>
 						<Profile />
+					</Route>
+					<Route exact path={"/search"}>
+						<Search />
 					</Route>
 				</Switch>
 			</Router>
