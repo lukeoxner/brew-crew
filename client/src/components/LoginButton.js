@@ -1,11 +1,37 @@
 import React from "react";
 import { useAuth0 } from "@auth0/auth0-react";
-import { Button, makeStyles, Container } from "@material-ui/core";
+import { Link, makeStyles, MenuItem } from "@material-ui/core";
 
-const LoginButton = () => {
+const useStyles = makeStyles((theme) => ({
+	login: {
+		cursor: "pointer",
+		color: "#ffffff",
+		margin: "5px",
+		textDecoration: "none",
+	},
+}));
+
+function LoginButton() {
+	const classes = useStyles();
 	const { loginWithRedirect } = useAuth0();
 
-	return <Button onClick={() => loginWithRedirect()}>Log In</Button>;
-};
+	const [anchorEl, setAnchorEl] = React.useState(null);
+	const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null);
+
+	const handleMobileMenuClose = () => {
+		setMobileMoreAnchorEl(null);
+	};
+
+	const handleMenuClose = () => {
+		setAnchorEl(null);
+		handleMobileMenuClose();
+	};
+
+	return (
+		<Link className={classes.login} onClick={() => loginWithRedirect()}>
+			Login
+		</Link>
+	);
+}
 
 export default LoginButton;
