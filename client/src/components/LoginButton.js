@@ -5,7 +5,7 @@ import { Link, makeStyles, MenuItem } from "@material-ui/core";
 const useStyles = makeStyles((theme) => ({
 	login: {
 		cursor: "pointer",
-		color: "#ffffff",
+		color: "#000000",
 		margin: "5px",
 		textDecoration: "none",
 	},

@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { useAuth0 } from "@auth0/auth0-react";
 import { fade, makeStyles } from "@material-ui/core/styles";
 import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
@@ -14,6 +15,8 @@ import AccountThumbnail from "./AccountThumbnail";
 import MailIcon from "@material-ui/icons/Mail";
 import NotificationsIcon from "@material-ui/icons/Notifications";
 import MoreIcon from "@material-ui/icons/MoreVert";
+import LoginButton from "./LoginButton";
+import LogoutButton from "./LogoutButton";
 
 const useStyles = makeStyles((theme) => ({
 	grow: {
@@ -51,6 +54,7 @@ const useStyles = makeStyles((theme) => ({
 
 export default function PrimarySearchAppBar() {
 	const classes = useStyles();
+	const { isAuthenticated } = useAuth0();
 	const [anchorEl, setAnchorEl] = React.useState(null);
 	const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null);
 
@@ -75,7 +79,7 @@ export default function PrimarySearchAppBar() {
 	};
 
 	const menuId = "primary-search-account-menu";
-	const renderMenu = (
+	const renderAuthMenu = (
 		<Menu
 			anchorEl={anchorEl}
 			anchorOrigin={{ vertical: "top", horizontal: "right" }}
@@ -85,8 +89,36 @@ export default function PrimarySearchAppBar() {
 			open={isMenuOpen}
 			onClose={handleMenuClose}
 		>
-			<MenuItem onClick={handleMenuClose}>Profile</MenuItem>
-			<MenuItem onClick={handleMenuClose}>My account</MenuItem>
+			<MenuItem onClick={handleMenuClose}>
+				<Link
+					to=""
+					style={{
+						color: "#000000",
+						textDecoration: "none",
+						margin: "5px",
+					}}
+				>
+					Profile
+				</Link>
+			</MenuItem>
+			<MenuItem onClick={handleMenuClose}>
+				<LogoutButton />
+			</MenuItem>
+		</Menu>
+	);
+	const renderUnauthMenu = (
+		<Menu
+			anchorEl={anchorEl}
+			anchorOrigin={{ vertical: "top", horizontal: "right" }}
+			id={menuId}
+			keepMounted
+			transformOrigin={{ vertical: "top", horizontal: "right" }}
+			open={isMenuOpen}
+			onClose={handleMenuClose}
+		>
+			<MenuItem onClick={handleMenuClose}>
+				<LoginButton />
+			</MenuItem>
 		</Menu>
 	);
 
@@ -201,7 +233,7 @@ export default function PrimarySearchAppBar() {
 				</Toolbar>
 			</AppBar>
 			{renderMobileMenu}
-			{renderMenu}
+			{isAuthenticated ? renderAuthMenu : renderUnauthMenu}
 		</div>
 	);
 }

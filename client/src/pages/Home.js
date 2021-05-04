@@ -70,7 +70,7 @@ function Home() {
 						>
 							<h3>Welcome back to BrewCrew!</h3>
 						</Typography>
-						<Button
+						{/* <Button
 							variant="outlined"
 							style={{ borderColor: "#f1a922" }}
 							onClick={() => loginWithRedirect()}
@@ -87,7 +87,7 @@ function Home() {
 							>
 								Sign Up / Log In
 							</Typography>
-						</Button>
+						</Button> */}
 					</Container>
 				</div>
 			</>

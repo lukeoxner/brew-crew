@@ -6,7 +6,7 @@ import { makeStyles } from "@material-ui/core";
 const useStyles = makeStyles(() => ({
 	login: {
 		cursor: "pointer",
-		color: "#ffffff",
+		color: "#000000",
 		margin: "5px",
 		textDecoration: "none",
 	},
