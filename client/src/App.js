@@ -1,11 +1,18 @@
-import "./App.css";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import NavBar from "./components/NavBar";
+import Landing from "./pages/Landing";
 
 function App() {
 	return (
-		<div className="App">
+		<div>
 			<NavBar />
-			<h1>Welcome to Brewery Finder!</h1>
+			<Router>
+				<Switch>
+					<Route exact path={"/"}>
+						<Landing />
+					</Route>
+				</Switch>
+			</Router>
 		</div>
 	);
 }
