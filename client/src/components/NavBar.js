@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { fade, makeStyles } from "@material-ui/core/styles";
 import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
@@ -122,16 +123,24 @@ export default function PrimarySearchAppBar() {
 				}}
 			>
 				<Toolbar>
-					<Typography
-						className={classes.title}
-						variant="h5"
-						noWrap
+					<Link
+						to="/"
 						style={{
-							fontFamily: "Zen Dots",
+							color: "#ffffff",
+							textDecoration: "none",
 						}}
 					>
-						BrewCrew
-					</Typography>
+						<Typography
+							className={classes.title}
+							variant="h5"
+							noWrap
+							style={{
+								fontFamily: "Zen Dots",
+							}}
+						>
+							BrewCrew
+						</Typography>
+					</Link>
 					<div className={classes.grow} />
 					<div className={classes.sectionDesktop}>
 						<IconButton

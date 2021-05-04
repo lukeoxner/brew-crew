@@ -5,8 +5,8 @@ import Landing from "./pages/Landing";
 function App() {
 	return (
 		<div>
-			<NavBar />
 			<Router>
+				<NavBar />
 				<Switch>
 					<Route exact path={"/"}>
 						<Landing />
