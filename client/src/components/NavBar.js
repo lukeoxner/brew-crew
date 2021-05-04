@@ -173,7 +173,7 @@ export default function PrimarySearchAppBar() {
 						}}
 					>
 						<Link
-							to="/"
+							to="/search"
 							style={{
 								color: "#ffffff",
 								textDecoration: "none",
