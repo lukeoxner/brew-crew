@@ -41,7 +41,9 @@ function Landing() {
 				container
 				style={{
 					position: "relative",
-					backgroundImage: `url(${Background})`,
+					background:
+						"linear-gradient(to bottom, rgba(000, 000, 000, 0), rgba(000, 000, 000, 0.55))",
+					backgroundImage: `linear-gradient(to left, rgba(000, 000, 000, 0), rgba(000, 000, 000, 0.75)), url(${Background})`,
 					width: "100",
 					height: "100vh",
 					backgroundRepeat: "no-repeat",
@@ -58,14 +60,16 @@ function Landing() {
 						bottom: "20%",
 						left: "5%",
 						width: "35%",
+						maxHeight: "90",
+						marginTop: "2rem",
 						backgroundColor: `rgba(0,0,0,.0)`,
 						color: "white",
-						overflow: "auto",
+						overflow: "hidden",
 					}}
 				>
 					<Typography
 						style={{
-							fontSize: "2.8rem",
+							fontSize: "2.5rem",
 						}}
 					>
 						<h3>BrewCrew is your key to finding great breweries.</h3>

@@ -142,7 +142,22 @@ export default function PrimarySearchAppBar() {
 						</Typography>
 					</Link>
 					<div className={classes.grow} />
-					<div className={classes.sectionDesktop}>
+					<div
+						className={classes.sectionDesktop}
+						style={{
+							alignItems: "center",
+						}}
+					>
+						<Link
+							to=""
+							style={{
+								color: "#ffffff",
+								textDecoration: "none",
+								marginRight: "3rem",
+							}}
+						>
+							Beer
+						</Link>
 						<IconButton
 							edge="end"
 							aria-label="account of current user"
@@ -151,7 +166,7 @@ export default function PrimarySearchAppBar() {
 							onClick={handleProfileMenuOpen}
 							color="inherit"
 						>
-							<AccountCircle />
+							<AccountCircle style={{ fontSize: "2.5rem" }} />
 						</IconButton>
 					</div>
 					<div className={classes.sectionMobile}>
