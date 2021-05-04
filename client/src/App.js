@@ -3,9 +3,14 @@ import { useAuth0 } from "@auth0/auth0-react";
 import NavBar from "./components/NavBar";
 import Landing from "./pages/Landing";
 import Home from "./pages/Home";
+import Loading from "./components/Loading";
 
 function App() {
 	const { user, isAuthenticated, isLoading } = useAuth0();
+
+	if (isLoading) {
+		return <Loading />;
+	}
 
 	return (
 		<div>
