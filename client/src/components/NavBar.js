@@ -154,6 +154,8 @@ export default function PrimarySearchAppBar() {
 								color: "#ffffff",
 								textDecoration: "none",
 								marginRight: "3rem",
+								fontWeight: "500",
+								fontSize: "1.2rem",
 							}}
 						>
 							Beer

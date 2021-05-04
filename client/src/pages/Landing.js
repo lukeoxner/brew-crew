@@ -41,9 +41,7 @@ function Landing() {
 				container
 				style={{
 					position: "relative",
-					background:
-						"linear-gradient(to bottom, rgba(000, 000, 000, 0), rgba(000, 000, 000, 0.55))",
-					backgroundImage: `linear-gradient(to left, rgba(000, 000, 000, 0), rgba(000, 000, 000, 0.75)), url(${Background})`,
+					backgroundImage: `linear-gradient(to left, rgba(000, 000, 000, 0), rgba(000, 000, 000, 0.70)), url(${Background})`,
 					width: "100",
 					height: "100vh",
 					backgroundRepeat: "no-repeat",
@@ -57,8 +55,8 @@ function Landing() {
 					className={classes.root}
 					style={{
 						position: "absolute",
-						bottom: "20%",
-						left: "5%",
+						bottom: "30%",
+						left: "10%",
 						width: "35%",
 						maxHeight: "90",
 						marginTop: "2rem",
@@ -70,10 +68,26 @@ function Landing() {
 					<Typography
 						style={{
 							fontSize: "2.5rem",
+							textShadow: "2px 2px #000000",
+							textAlign: "left",
 						}}
 					>
 						<h3>BrewCrew is your key to finding great breweries.</h3>
 					</Typography>
+					<Button variant="outlined" style={{ borderColor: "#f1a922" }}>
+						<Link
+							to=""
+							style={{
+								color: "#f1a922",
+								textDecoration: "none",
+								fontSize: "1rem",
+								position: "relative",
+								fontStyle: "italic",
+							}}
+						>
+							Sign Up / Log In
+						</Link>
+					</Button>
 				</Container>
 			</div>
 		</>
