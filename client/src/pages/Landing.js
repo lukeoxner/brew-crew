@@ -72,7 +72,7 @@ function Landing() {
 							textAlign: "left",
 						}}
 					>
-						<h3>BrewCrew is your key to finding great breweries.</h3>
+						<h3>BrewCrew is your key to finding great breweries nearby.</h3>
 					</Typography>
 					<Button variant="outlined" style={{ borderColor: "#f1a922" }}>
 						<Link
