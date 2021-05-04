@@ -50,7 +50,7 @@ function Landing() {
 						position: "absolute",
 						bottom: "25%",
 						left: "7%",
-						width: "50%",
+						width: "45%",
 						maxHeight: "90",
 						marginTop: "2rem",
 						backgroundColor: `rgba(0,0,0,.0)`,
@@ -60,7 +60,7 @@ function Landing() {
 				>
 					<Typography
 						style={{
-							fontSize: "3.0rem",
+							fontSize: "2.3rem",
 							fontWeight: "600",
 							textShadow: "2px 2px #000000",
 							textAlign: "left",
