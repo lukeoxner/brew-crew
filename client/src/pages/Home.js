@@ -37,7 +37,7 @@ function Home() {
 					container
 					style={{
 						position: "relative",
-						backgroundImage: `linear-gradient(to top, rgba(000, 000, 000, 0), rgba(000, 000, 000, 0.70)), url(${Background})`,
+						backgroundImage: `linear-gradient(to left, rgba(000, 000, 000, 0), rgba(000, 000, 000, 0.70)), url(${Background})`,
 						width: "100",
 						height: "100vh",
 						backgroundRepeat: "no-repeat",
@@ -63,12 +63,13 @@ function Home() {
 					>
 						<Typography
 							style={{
-								fontSize: "2.5rem",
+								fontSize: "4.0rem",
+								fontWeight: "600",
 								textShadow: "2px 2px #000000",
 								textAlign: "left",
 							}}
 						>
-							<h3>Welcome back to BrewCrew!</h3>
+							Welcome back to BrewCrew!
 						</Typography>
 						{/* <Button
 							variant="outlined"

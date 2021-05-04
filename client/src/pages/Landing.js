@@ -61,15 +61,15 @@ function Landing() {
 				>
 					<Typography
 						style={{
-							fontSize: "2.5rem",
+							fontSize: "3.0rem",
+							fontWeight: "600",
 							textShadow: "2px 2px #000000",
 							textAlign: "left",
+							marginBottom: "30px",
 						}}
 					>
-						<h3>
-							BrewCrew helps you find great local breweries, and meet cool
-							people to go enjoy them with!
-						</h3>
+						BrewCrew helps you find great local breweries, and meet cool people
+						to go enjoy them with!
 					</Typography>
 					<Button
 						variant="outlined"
