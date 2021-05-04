@@ -28,9 +28,9 @@ function LoginButton() {
 	};
 
 	return (
-		<Link className={classes.login} onClick={() => loginWithRedirect()}>
+		<div className={classes.login} onClick={() => loginWithRedirect()}>
 			Login
-		</Link>
+		</div>
 	);
 }
 

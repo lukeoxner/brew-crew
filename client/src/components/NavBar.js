@@ -173,7 +173,7 @@ export default function PrimarySearchAppBar() {
 						}}
 					>
 						<Link
-							to=""
+							to="/"
 							style={{
 								color: "#ffffff",
 								textDecoration: "none",
@@ -185,7 +185,7 @@ export default function PrimarySearchAppBar() {
 							Find Breweries
 						</Link>
 						<Link
-							to=""
+							to="/"
 							style={{
 								color: "#ffffff",
 								textDecoration: "none",
@@ -197,7 +197,7 @@ export default function PrimarySearchAppBar() {
 							Our Picks
 						</Link>
 						<Link
-							to=""
+							to="/"
 							style={{
 								color: "#ffffff",
 								textDecoration: "none",

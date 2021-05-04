@@ -17,12 +17,12 @@ function LogoutButton() {
 	const { logout } = useAuth0();
 
 	return (
-		<Link
+		<div
 			className={classes.login}
 			onClick={() => logout({ returnTo: window.location.origin })}
 		>
 			Logout
-		</Link>
+		</div>
 	);
 }
 
