@@ -153,7 +153,7 @@ export default function PrimarySearchAppBar() {
 							style={{
 								color: "#ffffff",
 								textDecoration: "none",
-								marginRight: "3rem",
+								marginRight: "2rem",
 								fontWeight: "500",
 								fontSize: "1.2rem",
 							}}
