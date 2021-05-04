@@ -1,13 +1,6 @@
 import React from "react";
-import {
-	Grid,
-	Card,
-	CardActions,
-	CardContent,
-	Button,
-	makeStyles,
-	Container,
-} from "@material-ui/core";
+import { Button, makeStyles, Container } from "@material-ui/core";
+import { useAuth0 } from "@auth0/auth0-react";
 import { Link } from "react-router-dom";
 import Background from "../images/beer-on-beach.jpg";
 import Typography from "@material-ui/core/Typography";
@@ -34,6 +27,7 @@ const useStyles = makeStyles({
 
 function Landing() {
 	const classes = useStyles();
+	const { loginWithRedirect } = useAuth0();
 
 	return (
 		<>
@@ -74,19 +68,23 @@ function Landing() {
 					>
 						<h3>BrewCrew is your key to finding great breweries nearby.</h3>
 					</Typography>
-					<Button variant="outlined" style={{ borderColor: "#f1a922" }}>
-						<Link
-							to=""
+					<Button
+						variant="outlined"
+						style={{ borderColor: "#f1a922" }}
+						onClick={() => loginWithRedirect()}
+					>
+						<Typography
 							style={{
 								color: "#f1a922",
 								textDecoration: "none",
 								fontSize: "1rem",
 								position: "relative",
 								fontStyle: "italic",
+								fontWeight: "500",
 							}}
 						>
 							Sign Up / Log In
-						</Link>
+						</Typography>
 					</Button>
 				</Container>
 			</div>
