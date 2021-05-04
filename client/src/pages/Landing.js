@@ -51,7 +51,7 @@ function Landing() {
 					overflow: "hidden",
 				}}
 			>
-				<Card
+				<Container
 					className={classes.root}
 					style={{
 						position: "absolute",
@@ -60,28 +60,17 @@ function Landing() {
 						width: "35%",
 						backgroundColor: `rgba(0,0,0,.0)`,
 						color: "white",
-						maxHeight: "55%",
 						overflow: "auto",
 					}}
-					variant="outlined"
 				>
-					<CardContent>
-						<Typography>
-							<h3>
-								<b>BrewCrew</b> is your key to finding great breweries.
-							</h3>
-						</Typography>
-					</CardContent>
-					<CardActions>
-						<Link
-							size="small"
-							to="/login"
-							style={{ textDecoration: "none", color: "violet" }}
-						>
-							Sign up today
-						</Link>
-					</CardActions>
-				</Card>
+					<Typography
+						style={{
+							fontSize: "2.8rem",
+						}}
+					>
+						<h3>BrewCrew is your key to finding great breweries.</h3>
+					</Typography>
+				</Container>
 			</div>
 		</>
 	);
