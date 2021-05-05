@@ -1,5 +1,5 @@
 import React from "react";
-import { makeStyles } from "@material-ui/core/styles";
+import { makeStyles, useTheme } from "@material-ui/core/styles";
 import clsx from "clsx";
 import Card from "@material-ui/core/Card";
 import CardHeader from "@material-ui/core/CardHeader";
@@ -19,9 +19,12 @@ import WallOfBeers from "../images/wall-of-beers.jpg";
 
 const useStyles = makeStyles((theme) => ({
 	root: {
-		// maxWidth: 345,
+		width: 800,
 		height: "100%",
 		margin: 15,
+		[theme.breakpoints.down("sm")]: {
+			width: 300,
+		},
 	},
 	media: {
 		height: 0,
@@ -44,6 +47,8 @@ const useStyles = makeStyles((theme) => ({
 
 export default function Details(props) {
 	const classes = useStyles();
+
+	const theme = useTheme();
 	const [expanded, setExpanded] = React.useState(false);
 
 	const handleExpandClick = () => {
@@ -51,18 +56,16 @@ export default function Details(props) {
 	};
 
 	return (
-		<Card className={classes.root}>
-			<CardHeader title={props.name} subheader={props.type} />
-			<CardMedia
+		<Card className={classes.root} key={props.id}>
+			<CardHeader title={props.name} subheader={props.id} />
+			{/* <CardMedia
 				className={classes.media}
 				image={WallOfBeers}
 				title="Paella dish"
-			/>
+			/> */}
 			<CardContent>
 				<Typography variant="body2" color="textSecondary" component="p">
-					This impressive paella is a perfect party dish and a fun meal to cook
-					together with your guests. Add 1 cup of frozen peas along with the
-					mussels, if you like.
+					Beer
 				</Typography>
 			</CardContent>
 			<CardActions disableSpacing>
