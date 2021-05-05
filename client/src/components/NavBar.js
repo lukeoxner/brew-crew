@@ -57,6 +57,11 @@ const useStyles = makeStyles((theme) => ({
 		fontWeight: "500",
 		fontSize: "1.2rem",
 	},
+	mobileMenuItem: {
+		margin: "5px",
+		textDecoration: "none",
+		color: "#000000",
+	},
 }));
 
 export default function PrimarySearchAppBar() {
@@ -141,26 +146,12 @@ export default function PrimarySearchAppBar() {
 			onClose={handleMobileMenuClose}
 		>
 			<MenuItem onClick={handleMenuClose}>
-				<Link
-					to="/search"
-					style={{
-						margin: "5px",
-						textDecoration: "none",
-						color: "#000000",
-					}}
-				>
+				<Link className={classes.mobileMenuItem} to="/search">
 					Find Breweries
 				</Link>
 			</MenuItem>
 			<MenuItem onClick={handleMenuClose}>
-				<Link
-					to="/"
-					style={{
-						margin: "5px",
-						textDecoration: "none",
-						color: "#000000",
-					}}
-				>
+				<Link className={classes.mobileMenuItem} to="/">
 					Our Picks
 				</Link>
 			</MenuItem>
