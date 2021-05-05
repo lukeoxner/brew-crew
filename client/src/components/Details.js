@@ -15,11 +15,13 @@ import FavoriteIcon from "@material-ui/icons/Favorite";
 import ShareIcon from "@material-ui/icons/Share";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 import MoreVertIcon from "@material-ui/icons/MoreVert";
+import WallOfBeers from "../images/wall-of-beers.jpg";
 
 const useStyles = makeStyles((theme) => ({
 	root: {
 		// maxWidth: 345,
-		height: 300,
+		height: "100%",
+		margin: 15,
 	},
 	media: {
 		height: 0,
@@ -53,7 +55,7 @@ export default function Details(props) {
 			<CardHeader title={props.name} subheader={props.type} />
 			<CardMedia
 				className={classes.media}
-				image="../images/wall-of-beers.jpg"
+				image={WallOfBeers}
 				title="Paella dish"
 			/>
 			<CardContent>
