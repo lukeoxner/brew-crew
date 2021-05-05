@@ -18,7 +18,8 @@ import MoreVertIcon from "@material-ui/icons/MoreVert";
 
 const useStyles = makeStyles((theme) => ({
 	root: {
-		maxWidth: 345,
+		// maxWidth: 345,
+		height: 300,
 	},
 	media: {
 		height: 0,
@@ -52,7 +53,7 @@ export default function Details(props) {
 			<CardHeader title={props.name} subheader={props.type} />
 			<CardMedia
 				className={classes.media}
-				image="/static/images/cards/paella.jpg"
+				image="../images/wall-of-beers.jpg"
 				title="Paella dish"
 			/>
 			<CardContent>
