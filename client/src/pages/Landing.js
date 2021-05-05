@@ -1,11 +1,11 @@
 import React from "react";
-import { Button, makeStyles, Container } from "@material-ui/core";
+import { Button, makeStyles, useTheme, Container } from "@material-ui/core";
 import { useAuth0 } from "@auth0/auth0-react";
 import { Link } from "react-router-dom";
 import Background from "../images/girls-with-beers.jpg";
 import Typography from "@material-ui/core/Typography";
 
-const useStyles = makeStyles({
+const useStyles = makeStyles((theme) => ({
 	root: {
 		minWidth: 275,
 	},
@@ -23,10 +23,21 @@ const useStyles = makeStyles({
 	indent: {
 		textIndent: "30px",
 	},
-});
+	hero: {
+		fontSize: "2.3rem",
+		fontWeight: "600",
+		textShadow: "2px 2px #000000",
+		textAlign: "left",
+		marginBottom: "30px",
+		[theme.breakpoints.down("sm")]: {
+			fontSize: "2.0rem",
+		},
+	},
+}));
 
 function Landing() {
 	const classes = useStyles();
+	const theme = useTheme();
 	const { loginWithRedirect } = useAuth0();
 
 	return (
@@ -58,15 +69,7 @@ function Landing() {
 						overflow: "hidden",
 					}}
 				>
-					<Typography
-						style={{
-							fontSize: "2.3rem",
-							fontWeight: "600",
-							textShadow: "2px 2px #000000",
-							textAlign: "left",
-							marginBottom: "30px",
-						}}
-					>
+					<Typography className={classes.hero}>
 						BrewCrew helps you find great local breweries, and meet cool people
 						to go enjoy them with!
 					</Typography>

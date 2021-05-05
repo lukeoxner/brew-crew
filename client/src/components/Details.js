@@ -23,6 +23,9 @@ const useStyles = makeStyles((theme) => ({
 		height: "100%",
 		margin: 15,
 		[theme.breakpoints.down("sm")]: {
+			width: 500,
+		},
+		[theme.breakpoints.down("xs")]: {
 			width: 300,
 		},
 	},
@@ -47,7 +50,6 @@ const useStyles = makeStyles((theme) => ({
 
 export default function Details(props) {
 	const classes = useStyles();
-
 	const theme = useTheme();
 	const [expanded, setExpanded] = React.useState(false);
 
@@ -56,7 +58,7 @@ export default function Details(props) {
 	};
 
 	return (
-		<Card className={classes.root} key={props.id}>
+		<Card className={classes.root}>
 			<CardHeader title={props.name} subheader={props.id} />
 			{/* <CardMedia
 				className={classes.media}
