@@ -66,7 +66,20 @@ export default function Details(props) {
 			{/* <CardMedia className={classes.media} image={WallOfBeers} title="beer" /> */}
 			<CardContent>
 				<Typography variant="body2" color="textSecondary" component="p">
-					{`${props.city}, ${props.state}`}
+					Website:{" "}
+					{props.website ? (
+						<a href={props.website} target="blank">
+							{props.website}
+						</a>
+					) : (
+						"N/A"
+					)}
+				</Typography>
+				<Typography variant="body2" color="textSecondary" component="p">
+					Address:{" "}
+					{props.street
+						? `${props.street} - ${props.city}, ${props.state}`
+						: "N/A"}
 				</Typography>
 			</CardContent>
 			<CardActions disableSpacing>
