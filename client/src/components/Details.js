@@ -30,8 +30,8 @@ const useStyles = makeStyles((theme) => ({
 		},
 	},
 	media: {
-		height: 0,
-		paddingTop: "56.25%", // 16:9
+		height: 120,
+		// paddingTop: "56.25%", // 16:9
 	},
 	expand: {
 		transform: "rotate(0deg)",
@@ -59,15 +59,14 @@ export default function Details(props) {
 
 	return (
 		<Card className={classes.root}>
-			<CardHeader title={props.name} subheader={props.id} />
-			{/* <CardMedia
-				className={classes.media}
-				image={WallOfBeers}
-				title="Paella dish"
-			/> */}
+			<CardHeader
+				title={props.name}
+				subheader={`${props.city}, ${props.state}`}
+			/>
+			{/* <CardMedia className={classes.media} image={WallOfBeers} title="beer" /> */}
 			<CardContent>
 				<Typography variant="body2" color="textSecondary" component="p">
-					Beer
+					{`${props.city}, ${props.state}`}
 				</Typography>
 			</CardContent>
 			<CardActions disableSpacing>

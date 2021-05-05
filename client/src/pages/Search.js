@@ -9,7 +9,9 @@ function Home() {
 	// make a call to API to get some data - useEffect
 	useEffect(() => {
 		// make API call here
-		fetch("https://api.openbrewerydb.org/breweries?by_state=colorado")
+		fetch(
+			"https://api.openbrewerydb.org/breweries?by_state=colorado&per_page=50"
+		)
 			.then((res) => res.json())
 			.then((data) => setResults(data));
 	}, []);
