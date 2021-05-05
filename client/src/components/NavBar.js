@@ -50,6 +50,13 @@ const useStyles = makeStyles((theme) => ({
 			display: "none",
 		},
 	},
+	navLink: {
+		color: "#ffffff",
+		textDecoration: "none",
+		marginRight: "2rem",
+		fontWeight: "500",
+		fontSize: "1.2rem",
+	},
 }));
 
 export default function PrimarySearchAppBar() {
@@ -206,40 +213,13 @@ export default function PrimarySearchAppBar() {
 							alignItems: "center",
 						}}
 					>
-						<Link
-							to="/search"
-							style={{
-								color: "#ffffff",
-								textDecoration: "none",
-								marginRight: "2rem",
-								fontWeight: "500",
-								fontSize: "1.2rem",
-							}}
-						>
+						<Link className={classes.navLink} to="/search">
 							Find Breweries
 						</Link>
-						<Link
-							to="/"
-							style={{
-								color: "#ffffff",
-								textDecoration: "none",
-								marginRight: "2rem",
-								fontWeight: "500",
-								fontSize: "1.2rem",
-							}}
-						>
+						<Link className={classes.navLink} to="/">
 							Our Picks
 						</Link>
-						<Link
-							to="/"
-							style={{
-								color: "#ffffff",
-								textDecoration: "none",
-								marginRight: "2rem",
-								fontWeight: "500",
-								fontSize: "1.2rem",
-							}}
-						>
+						<Link className={classes.navLink} to="/">
 							About
 						</Link>
 						<IconButton
