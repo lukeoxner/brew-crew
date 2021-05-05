@@ -133,8 +133,42 @@ export default function PrimarySearchAppBar() {
 			open={isMobileMenuOpen}
 			onClose={handleMobileMenuClose}
 		>
-			<MenuItem onClick={handleMenuClose}>Profile</MenuItem>
-			<MenuItem onClick={handleMenuClose}>My account</MenuItem>
+			<MenuItem onClick={handleMenuClose}>
+				<Link
+					to="/search"
+					style={{
+						margin: "5px",
+						textDecoration: "none",
+						color: "#000000",
+					}}
+				>
+					Find Breweries
+				</Link>
+			</MenuItem>
+			<MenuItem onClick={handleMenuClose}>
+				<Link
+					to="/"
+					style={{
+						margin: "5px",
+						textDecoration: "none",
+						color: "#000000",
+					}}
+				>
+					Our Picks
+				</Link>
+			</MenuItem>
+			<MenuItem onClick={handleProfileMenuOpen}>
+				<IconButton
+					edge="end"
+					aria-label="account of current user"
+					aria-controls={menuId}
+					aria-haspopup="true"
+					onClick={handleProfileMenuOpen}
+					color="inherit"
+				>
+					<AccountThumbnail />
+				</IconButton>
+			</MenuItem>
 		</Menu>
 	);
 
