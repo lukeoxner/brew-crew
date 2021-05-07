@@ -10,7 +10,7 @@ function Home() {
 	useEffect(() => {
 		// make API call here
 		fetch(
-			"https://api.openbrewerydb.org/breweries?by_state=colorado&per_page=50"
+			"https://api.openbrewerydb.org/breweries?by_state=colorado&by_city=fort_collins&per_page=5"
 		)
 			.then((res) => res.json())
 			.then((data) => setResults(data));

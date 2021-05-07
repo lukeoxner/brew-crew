@@ -6,6 +6,7 @@ import Home from "./pages/Home";
 import Profile from "./pages/Profile";
 import Loading from "./components/Loading";
 import Search from "./pages/Search";
+import OurPicks from "./pages/OurPicks";
 
 function App() {
 	const { user, isAuthenticated, isLoading } = useAuth0();
@@ -31,6 +32,9 @@ function App() {
 					</Route>
 					<Route exact path={"/search"}>
 						<Search />
+					</Route>
+					<Route exact path={"/ourpicks"}>
+						<OurPicks />
 					</Route>
 				</Switch>
 			</Router>
