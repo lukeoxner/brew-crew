@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Grid, Container } from "@material-ui/core/";
 import Details from "../components/Details";
 
-function Home() {
+function Search() {
 	// create state - useState
 	const [results, setResults] = useState([]);
 
@@ -41,4 +41,4 @@ function Home() {
 	);
 }
 
-export default Home;
+export default Search;

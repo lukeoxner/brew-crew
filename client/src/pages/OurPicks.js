@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Grid, Container } from "@material-ui/core/";
 import Details from "../components/Details";
 
-function Home() {
+function OurPicks() {
 	// create state - useState
 	const [results, setResults] = useState([]);
 
@@ -10,7 +10,7 @@ function Home() {
 	useEffect(() => {
 		// make API call here
 		fetch(
-			"https://api.openbrewerydb.org/breweries?by_state=colorado&by_city=fort_collins&per_page=5"
+			"https://api.openbrewerydb.org/breweries?by_state=colorado&by_city=fort_collins&per_page=3"
 		)
 			.then((res) => res.json())
 			.then((data) => setResults(data));
@@ -41,4 +41,4 @@ function Home() {
 	);
 }
 
-export default Home;
+export default OurPicks;
