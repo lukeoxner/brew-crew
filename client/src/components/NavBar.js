@@ -151,7 +151,7 @@ export default function PrimarySearchAppBar() {
 				</Link>
 			</MenuItem>
 			<MenuItem onClick={handleMenuClose}>
-				<Link className={classes.mobileMenuItem} to="/">
+				<Link className={classes.mobileMenuItem} to="/ourpicks">
 					Our Picks
 				</Link>
 			</MenuItem>
@@ -207,7 +207,7 @@ export default function PrimarySearchAppBar() {
 						<Link className={classes.navLink} to="/search">
 							Find Breweries
 						</Link>
-						<Link className={classes.navLink} to="/">
+						<Link className={classes.navLink} to="/ourpicks">
 							Our Picks
 						</Link>
 						<Link className={classes.navLink} to="/">
