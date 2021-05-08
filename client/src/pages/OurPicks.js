@@ -18,7 +18,7 @@ function OurPicks() {
 
 	return (
 		<>
-			<h1>Search Page</h1>
+			<h1>Our Picks</h1>
 			<Container>
 				<Grid container direction="row" justify="center" alignItems="center">
 					{results.map((result) => (
