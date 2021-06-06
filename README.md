@@ -4,7 +4,7 @@
 
 ## Description
 
-# APP STILL IN PROGRESS - MVP EXPECTED 5/10/21
+# APP STILL IN PROGRESS
 
 BrewCrew helps you find great local breweries, and meet cool people to go enjoy them with!
 The initial functionality of the app will allow users to find local breweries from the Open Brewery Database API. Further development will introduce the ability for users to enter information such as location, personality, and interests, and be matched up with fellow beer lovers to form their own "brew crews" to go check out breweries with.
