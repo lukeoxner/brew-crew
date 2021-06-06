@@ -1,8 +1,13 @@
 import React, { useEffect, useState } from "react";
 import { Grid, Container } from "@material-ui/core/";
 import Details from "../components/Details";
+import API from "../utils/BreweryAPI";
 
 function Search() {
+	// temporary variable placeholder for search term
+	// TODO - write function to change spaces to % in search term
+	let searchTerm = "Fort Collins";
+
 	// create state - useState
 	const [results, setResults] = useState([]);
 
