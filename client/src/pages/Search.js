@@ -26,7 +26,7 @@ function Search() {
 
 	// temporary variable placeholder for search term
 	// TODO - write function to change spaces to % in search term
-	let searchTerm = "Fort Collins";
+	let searchTerm = "Denver";
 
 	// create state - useState
 	const [results, setResults] = useState([]);
@@ -42,6 +42,7 @@ function Search() {
 	}, []);
 
 	const onChange = (e) => {
+		console.log(e.target.value);
 		setResults(API.search(e.target.value));
 	};
 
@@ -67,20 +68,22 @@ function Search() {
 					</Grid>
 				</Grid>
 				<Grid container direction="row" justify="center" alignItems="center">
-					{results.map((result) => (
-						<Grid item key={result.id}>
-							<Details
-								id={result.id}
-								key={result.id}
-								name={result.name}
-								street={result.street}
-								city={result.city}
-								state={result.state}
-								website={result.website_url}
-								type={result.brewery_type}
-							/>
-						</Grid>
-					))}
+					{results
+						? results.map((result) => (
+								<Grid item key={result.id}>
+									<Details
+										id={result.id}
+										key={result.id}
+										name={result.name}
+										street={result.street}
+										city={result.city}
+										state={result.state}
+										website={result.website_url}
+										type={result.brewery_type}
+									/>
+								</Grid>
+						  ))
+						: console.log("yo")}
 				</Grid>
 			</Container>
 		</>
