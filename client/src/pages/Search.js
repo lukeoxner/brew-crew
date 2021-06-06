@@ -1,9 +1,29 @@
 import React, { useEffect, useState } from "react";
-import { Grid, Container } from "@material-ui/core/";
+import { Grid, Container, TextField } from "@material-ui/core/";
+import { makeStyles } from "@material-ui/core/styles";
 import Details from "../components/Details";
 import API from "../utils/BreweryAPI";
 
+const useStyles = makeStyles((theme) => ({
+	root: {
+		display: "flex",
+		flexWrap: "wrap",
+	},
+	// textField: {
+	// 	marginLeft: theme.spacing(1),
+	// 	marginRight: theme.spacing(1),
+	// 	width: "25ch",
+	// },
+	// container: {
+	// 	display: "grid",
+	// 	gridTemplateColumns: "repeat(12, 1fr)",
+	// 	gridGap: theme.spacing(3),
+	// },
+}));
+
 function Search() {
+	const classes = useStyles();
+
 	// temporary variable placeholder for search term
 	// TODO - write function to change spaces to % in search term
 	let searchTerm = "Fort Collins";
