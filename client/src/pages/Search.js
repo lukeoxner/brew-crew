@@ -14,10 +14,6 @@ const useStyles = makeStyles((theme) => ({
 function Search() {
 	const classes = useStyles();
 
-	// temporary variable placeholder for search term
-	// TODO - write function to change spaces to % in search term
-	let searchTerm = "Denver";
-
 	// create state - useState
 	const [results, setResults] = useState([]);
 
