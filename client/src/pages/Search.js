@@ -14,6 +14,8 @@ const useStyles = makeStyles((theme) => ({
 function Search() {
 	const classes = useStyles();
 
+	// TODO - write function to change spaces to % in search term
+
 	// create state - useState
 	const [results, setResults] = useState([]);
 

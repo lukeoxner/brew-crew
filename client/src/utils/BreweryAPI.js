@@ -15,6 +15,6 @@ export default {
 			});
 	},
 	getAll: function () {
-		return axios.get("https://api.openbrewerydb.org/breweries");
+		return axios.get("https://api.openbrewerydb.org/breweries?per_page=25");
 	},
 };
