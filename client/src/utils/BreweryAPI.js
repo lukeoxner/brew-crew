@@ -15,7 +15,7 @@ export default {
 			});
 	},
 	getCity: function (city) {
-		fetch();
+		fetch(`https://api.openbrewerydb.org/breweries?by_city=${city}`);
 	},
 	getAll: function () {
 		return axios.get("https://api.openbrewerydb.org/breweries?per_page=25");
