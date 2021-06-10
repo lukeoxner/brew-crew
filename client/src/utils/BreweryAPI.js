@@ -17,6 +17,9 @@ export default {
 	getCity: function (city) {
 		fetch(`https://api.openbrewerydb.org/breweries?by_city=${city}`);
 	},
+	getState: function (state) {
+		fetch(`https://api.openbrewerydb.org/breweries?by_state=${state}`);
+	},
 	getAll: function () {
 		return axios.get("https://api.openbrewerydb.org/breweries?per_page=25");
 	},
