@@ -22,23 +22,43 @@ function Search() {
 
 	// make a call to API to get some data - useEffect
 	useEffect(() => {
-		setResults(API.search());
+		setResults(API.search(searchTerm));
+		console.log("useEffect called");
 	}, []);
 
 	const onChange = (e) => {
 		console.log(`e.target.value: ${e.target.value}`);
 		setSearchTerm(e.target.value);
-		API.search(searchTerm).then(() => {console.log("yooo")});
-
+		fetch(
+			`https://api.openbrewerydb.org/breweries/search?query=${searchTerm}&per_page=25`
+		)
+			.then((res) => res.json())
+			.then(function (data) {
+				let theResult = data;
+				console.log(`API file result: ${theResult}`);
+				setResults(theResult);
+			});
+		// API.search(searchTerm);
 	};
 
 	const handleKeyPress = (e) => {
-		if(e.key === 'Enter'){
-		  console.log('enter press here! ')
+		if (e.key === "Enter") {
+			console.log("enter press here! ");
+			fetch(
+				`https://api.openbrewerydb.org/breweries/search?query=${searchTerm}&per_page=25`
+			)
+				.then((res) => res.json())
+				.then(function (data) {
+					let theResult = data;
+					console.log(`API file result: ${theResult}`);
+					setResults(theResult);
+				});
 		}
-	  }
+	};
 
-	  if (!results) {
+	async function runSearch() {}
+
+	if (!results) {
 		return (
 			<>
 				<h1>Search Page</h1>
@@ -56,6 +76,7 @@ function Search() {
 										shrink: true,
 									}}
 									onChange={onChange}
+									onKeyPress={handleKeyPress}
 								/>
 							</div>
 						</Grid>
@@ -108,6 +129,5 @@ function Search() {
 		);
 	}
 }
-
 
 export default Search;
