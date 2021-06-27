@@ -17,6 +17,7 @@ function Search() {
 	// TODO - write function to change spaces to % in search term
 
 	// create state - useState
+	const [searchTerm, setSearchTerm] = useState([]);
 	const [results, setResults] = useState([]);
 
 	// make a call to API to get some data - useEffect
@@ -26,10 +27,9 @@ function Search() {
 
 	const onChange = (e) => {
 		console.log(`e.target.value: ${e.target.value}`);
-		
-		setResults(API.search(e.target.value));
-		// console.log(API.search(e.target.value));
-		console.log(`Results: ${results}`);
+		setSearchTerm(e.target.value);
+		API.search(searchTerm).then(() => {console.log("yooo")});
+
 	};
 
 	const handleKeyPress = (e) => {
@@ -38,6 +38,7 @@ function Search() {
 		}
 	  }
 
+	  if (!results) {
 		return (
 			<>
 				<h1>Search Page</h1>
@@ -55,7 +56,6 @@ function Search() {
 										shrink: true,
 									}}
 									onChange={onChange}
-									onKeyPress={handleKeyPress}
 								/>
 							</div>
 						</Grid>
@@ -63,9 +63,7 @@ function Search() {
 				</Container>
 			</>
 		);
-	
-
-	function outputResults() {
+	} else {
 		return (
 			<>
 				<h1>Search Page</h1>
