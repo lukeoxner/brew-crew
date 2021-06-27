@@ -10,7 +10,7 @@ export default {
 			.then((res) => res.json())
 			.then(function (data) {
 				let theResult = data;
-				// console.log(theResult);
+				console.log(`API file result: ${theResult}`);
 				return theResult;
 			});
 	},

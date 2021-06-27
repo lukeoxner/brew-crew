@@ -25,10 +25,10 @@ function Search() {
 	}, []);
 
 	const onChange = (e) => {
-		console.log(e.target.value);
+		console.log(`e.target.value: ${e.target.value}`);
 		setResults(API.search(e.target.value));
 		// console.log(API.search(e.target.value));
-		console.log(results);
+		console.log(`Results: ${results}`);
 	};
 
 	if (!results) {
