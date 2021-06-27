@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { HashRouter as Router, Route, Switch } from "react-router-dom";
 import { useAuth0 } from "@auth0/auth0-react";
 import NavBar from "./components/NavBar";
 import Landing from "./pages/Landing";
@@ -20,22 +20,12 @@ function App() {
 			<Router>
 				<NavBar />
 				<Switch>
-					<Route exact path={"/"}>
-						{isAuthenticated ? <Home /> : <Landing />}
-					</Route>
-					<Route exact path={"/home"}>
-						{/* {isAuthenticated ? <Home /> : <Landing />} */}
-						<Home />
-					</Route>
-					<Route exact path={"/profile"}>
-						<Profile />
-					</Route>
-					<Route exact path={"/search"}>
-						<Search />
-					</Route>
-					<Route exact path={"/ourpicks"}>
-						<OurPicks />
-					</Route>
+					<Route exact path="/" component={Landing} />
+					<Route exact path="/home" component={Home} />
+					<Route exact path="/profile" component={Profile} />
+					<Route exact path="/search" component={Search} />
+					<Route exact path="/ourpicks" component={OurPicks} />
+					<Route exact path="*" component={Landing} />
 				</Switch>
 			</Router>
 		</div>

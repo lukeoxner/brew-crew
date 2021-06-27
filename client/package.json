@@ -1,7 +1,8 @@
 {
-  "name": "my-app",
+  "name": "brewcrew",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://lukeoxner.github.io/brewery-finder",
   "dependencies": {
     "@auth0/auth0-react": "^1.4.0",
     "@material-ui/core": "^4.11.4",
@@ -18,6 +19,8 @@
     "web-vitals": "^1.1.1"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
