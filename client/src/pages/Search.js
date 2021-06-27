@@ -26,12 +26,18 @@ function Search() {
 
 	const onChange = (e) => {
 		console.log(`e.target.value: ${e.target.value}`);
+		
 		setResults(API.search(e.target.value));
 		// console.log(API.search(e.target.value));
 		console.log(`Results: ${results}`);
 	};
 
-	if (!results) {
+	const handleKeyPress = (e) => {
+		if(e.key === 'Enter'){
+		  console.log('enter press here! ')
+		}
+	  }
+
 		return (
 			<>
 				<h1>Search Page</h1>
@@ -49,6 +55,7 @@ function Search() {
 										shrink: true,
 									}}
 									onChange={onChange}
+									onKeyPress={handleKeyPress}
 								/>
 							</div>
 						</Grid>
@@ -56,7 +63,9 @@ function Search() {
 				</Container>
 			</>
 		);
-	} else {
+	
+
+	function outputResults() {
 		return (
 			<>
 				<h1>Search Page</h1>
@@ -101,5 +110,6 @@ function Search() {
 		);
 	}
 }
+
 
 export default Search;
