@@ -17,46 +17,33 @@ function Search() {
 	// TODO - write function to change spaces to % in search term
 
 	// create state - useState
-	const [searchTerm, setSearchTerm] = useState([]);
+	const [searchTerm, setSearchTerm] = useState("");
 	const [results, setResults] = useState([]);
 
 	// make a call to API to get some data - useEffect
 	useEffect(() => {
-		setResults(API.search(searchTerm));
 		console.log("useEffect called");
 	}, []);
 
 	const onChange = (e) => {
 		console.log(`e.target.value: ${e.target.value}`);
-		setSearchTerm(e.target.value);
+		let searchInput = e.target.value.replace(" ", "_");
+		setSearchTerm(searchInput);
+		console.log(searchTerm);
 		fetch(
 			`https://api.openbrewerydb.org/breweries/search?query=${searchTerm}&per_page=25`
 		)
 			.then((res) => res.json())
 			.then(function (data) {
-				let theResult = data;
-				console.log(`API file result: ${theResult}`);
-				setResults(theResult);
+				setResults(data);
 			});
-		// API.search(searchTerm);
 	};
 
 	const handleKeyPress = (e) => {
 		if (e.key === "Enter") {
-			console.log("enter press here! ");
-			fetch(
-				`https://api.openbrewerydb.org/breweries/search?query=${searchTerm}&per_page=25`
-			)
-				.then((res) => res.json())
-				.then(function (data) {
-					let theResult = data;
-					console.log(`API file result: ${theResult}`);
-					setResults(theResult);
-				});
+			console.log(`type of: ${typeof searchTerm}`);
 		}
 	};
-
-	async function runSearch() {}
 
 	if (!results) {
 		return (
@@ -102,6 +89,7 @@ function Search() {
 										shrink: true,
 									}}
 									onChange={onChange}
+									onKeyPress={handleKeyPress}
 								/>
 							</div>
 						</Grid>
