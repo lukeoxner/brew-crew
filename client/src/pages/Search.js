@@ -23,12 +23,6 @@ function Search() {
 	// make a call to API to get some data - useEffect
 	useEffect(() => {
 		console.log("useEffect called");
-	}, []);
-
-	const onChange = (e) => {
-		console.log(`e.target.value: ${e.target.value}`);
-		let searchInput = e.target.value.replace(" ", "_");
-		setSearchTerm(searchInput);
 		console.log(searchTerm);
 		fetch(
 			`https://api.openbrewerydb.org/breweries/search?query=${searchTerm}&per_page=25`
@@ -37,12 +31,13 @@ function Search() {
 			.then(function (data) {
 				setResults(data);
 			});
-	};
+	}, [searchTerm]);
 
-	const handleKeyPress = (e) => {
-		if (e.key === "Enter") {
-			console.log(`type of: ${typeof searchTerm}`);
-		}
+	const onChange = (e) => {
+		console.log(`e.target.value: ${e.target.value}`);
+		let searchInput = e.target.value;
+		let formattedSearchInput = searchInput.replace(" ", "_");
+		setSearchTerm(formattedSearchInput);
 	};
 
 	if (!results) {
@@ -63,7 +58,6 @@ function Search() {
 										shrink: true,
 									}}
 									onChange={onChange}
-									onKeyPress={handleKeyPress}
 								/>
 							</div>
 						</Grid>
@@ -89,7 +83,6 @@ function Search() {
 										shrink: true,
 									}}
 									onChange={onChange}
-									onKeyPress={handleKeyPress}
 								/>
 							</div>
 						</Grid>

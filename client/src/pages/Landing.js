@@ -70,26 +70,27 @@ function Landing() {
 					}}
 				>
 					<Typography className={classes.hero}>
-						BrewCrew helps you find great local breweries, and meet cool people
-						to go enjoy them with!
+						BrewCrew helps you find great local breweries!
 					</Typography>
-					<Button
-						variant="outlined"
-						style={{ borderColor: "#f1a922" }}
-						onClick={() => loginWithRedirect()}
-					>
-						<Typography
-							style={{
-								color: "#f1a922",
-								textDecoration: "none",
-								fontSize: "1rem",
-								position: "relative",
-								fontStyle: "italic",
-								fontWeight: "500",
-							}}
+					<Button variant="outlined" style={{ borderColor: "#f1a922" }}>
+						<Link
+							className={classes.mobileMenuItem}
+							to="/search"
+							style={{ textDecoration: "none" }}
 						>
-							Join the Crew
-						</Typography>
+							<Typography
+								style={{
+									color: "#f1a922",
+									textDecoration: "none",
+									fontSize: "1rem",
+									position: "relative",
+									fontStyle: "italic",
+									fontWeight: "500",
+								}}
+							>
+								Search Breweries
+							</Typography>
+						</Link>
 					</Button>
 				</Container>
 			</div>

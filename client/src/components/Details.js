@@ -82,7 +82,7 @@ export default function Details(props) {
 						: "N/A"}
 				</Typography>
 			</CardContent>
-			<CardActions disableSpacing>
+			{/* <CardActions disableSpacing>
 				<IconButton aria-label="add to favorites">
 					<FavoriteIcon />
 				</IconButton>
@@ -99,12 +99,12 @@ export default function Details(props) {
 				>
 					<ExpandMoreIcon />
 				</IconButton>
-			</CardActions>
-			<Collapse in={expanded} timeout="auto" unmountOnExit>
+			</CardActions> */}
+			{/* <Collapse in={expanded} timeout="auto" unmountOnExit>
 				<CardContent>
 					<Typography paragraph>Brewery info here!</Typography>
 				</CardContent>
-			</Collapse>
+			</Collapse> */}
 		</Card>
 	);
 }

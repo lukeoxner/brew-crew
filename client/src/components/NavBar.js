@@ -210,9 +210,9 @@ export default function PrimarySearchAppBar() {
 						<Link className={classes.navLink} to="/ourpicks">
 							Our Picks
 						</Link>
-						<Link className={classes.navLink} to="/">
+						{/* <Link className={classes.navLink} to="/">
 							About
-						</Link>
+						</Link> */}
 						<IconButton
 							edge="end"
 							aria-label="account of current user"
