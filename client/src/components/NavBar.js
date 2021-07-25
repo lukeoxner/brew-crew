@@ -91,48 +91,48 @@ export default function PrimarySearchAppBar() {
 	};
 
 	const menuId = "primary-search-account-menu";
-	const renderAuthMenu = (
-		<Menu
-			anchorEl={anchorEl}
-			anchorOrigin={{ vertical: "top", horizontal: "right" }}
-			id={menuId}
-			keepMounted
-			transformOrigin={{ vertical: "top", horizontal: "right" }}
-			open={isMenuOpen}
-			onClose={handleMenuClose}
-		>
-			<MenuItem onClick={handleMenuClose}>
-				<Link
-					to="/profile"
-					style={{
-						color: "#000000",
-						textDecoration: "none",
-						margin: "5px",
-					}}
-				>
-					Profile
-				</Link>
-			</MenuItem>
-			<MenuItem onClick={handleMenuClose}>
-				<LogoutButton />
-			</MenuItem>
-		</Menu>
-	);
-	const renderUnauthMenu = (
-		<Menu
-			anchorEl={anchorEl}
-			anchorOrigin={{ vertical: "top", horizontal: "right" }}
-			id={menuId}
-			keepMounted
-			transformOrigin={{ vertical: "top", horizontal: "right" }}
-			open={isMenuOpen}
-			onClose={handleMenuClose}
-		>
-			<MenuItem onClick={handleMenuClose}>
-				<LoginButton />
-			</MenuItem>
-		</Menu>
-	);
+	// const renderAuthMenu = (
+	// 	<Menu
+	// 		anchorEl={anchorEl}
+	// 		anchorOrigin={{ vertical: "top", horizontal: "right" }}
+	// 		id={menuId}
+	// 		keepMounted
+	// 		transformOrigin={{ vertical: "top", horizontal: "right" }}
+	// 		open={isMenuOpen}
+	// 		onClose={handleMenuClose}
+	// 	>
+	// 		<MenuItem onClick={handleMenuClose}>
+	// 			<Link
+	// 				to="/profile"
+	// 				style={{
+	// 					color: "#000000",
+	// 					textDecoration: "none",
+	// 					margin: "5px",
+	// 				}}
+	// 			>
+	// 				Profile
+	// 			</Link>
+	// 		</MenuItem>
+	// 		<MenuItem onClick={handleMenuClose}>
+	// 			<LogoutButton />
+	// 		</MenuItem>
+	// 	</Menu>
+	// );
+	// const renderUnauthMenu = (
+	// 	<Menu
+	// 		anchorEl={anchorEl}
+	// 		anchorOrigin={{ vertical: "top", horizontal: "right" }}
+	// 		id={menuId}
+	// 		keepMounted
+	// 		transformOrigin={{ vertical: "top", horizontal: "right" }}
+	// 		open={isMenuOpen}
+	// 		onClose={handleMenuClose}
+	// 	>
+	// 		<MenuItem onClick={handleMenuClose}>
+	// 			<LoginButton />
+	// 		</MenuItem>
+	// 	</Menu>
+	// );
 
 	const mobileMenuId = "primary-search-account-menu-mobile";
 	const renderMobileMenu = (
@@ -155,7 +155,7 @@ export default function PrimarySearchAppBar() {
 					Our Picks
 				</Link>
 			</MenuItem>
-			<MenuItem onClick={handleProfileMenuOpen}>
+			{/* <MenuItem onClick={handleProfileMenuOpen}>
 				<IconButton
 					edge="end"
 					aria-label="account of current user"
@@ -166,7 +166,7 @@ export default function PrimarySearchAppBar() {
 				>
 					<AccountThumbnail />
 				</IconButton>
-			</MenuItem>
+			</MenuItem> */}
 		</Menu>
 	);
 
@@ -213,7 +213,7 @@ export default function PrimarySearchAppBar() {
 						{/* <Link className={classes.navLink} to="/">
 							About
 						</Link> */}
-						<IconButton
+						{/* <IconButton
 							edge="end"
 							aria-label="account of current user"
 							aria-controls={menuId}
@@ -222,7 +222,7 @@ export default function PrimarySearchAppBar() {
 							color="inherit"
 						>
 							<AccountThumbnail />
-						</IconButton>
+						</IconButton> */}
 					</div>
 					<div className={classes.sectionMobile}>
 						<IconButton
@@ -238,7 +238,7 @@ export default function PrimarySearchAppBar() {
 				</Toolbar>
 			</AppBar>
 			{renderMobileMenu}
-			{isAuthenticated ? renderAuthMenu : renderUnauthMenu}
+			{/* {isAuthenticated ? renderAuthMenu : renderUnauthMenu} */}
 		</div>
 	);
 }
