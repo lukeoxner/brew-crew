@@ -18,16 +18,6 @@ import MoreVertIcon from '@material-ui/icons/MoreVert';
 import WallOfBeers from '../images/wall-of-beers.jpg';
 
 const useStyles = makeStyles((theme) => ({
-	components: {
-		// Name of the component
-		MuiTypography: {
-			styleOverrides: {
-				colorTextSecondary: {
-					color: '#ffffff',
-				},
-			},
-		},
-	},
 	typography: {
 		color: '#fff',
 	},
@@ -64,8 +54,16 @@ const useStyles = makeStyles((theme) => ({
 	avatar: {
 		backgroundColor: red[500],
 	},
+	title: {
+		color: '#fff',
+		fontWeight: 500,
+		// fontSize: '30px',
+	},
 	subheader: {
 		color: '#fff',
+	},
+	link: {
+		color: '#f1a922',
 	},
 }));
 
@@ -81,7 +79,11 @@ export default function Details(props) {
 	return (
 		<Card className={classes.root}>
 			<CardHeader
-				title={props.name}
+				title={
+					<Typography className={classes.title} variant='h5'>
+						{props.name}
+					</Typography>
+				}
 				subheader={
 					<Typography className={classes.subheader}>
 						{props.city}, {props.state}
@@ -93,7 +95,7 @@ export default function Details(props) {
 				<Typography variant='body2' component='p'>
 					Website:{' '}
 					{props.website ? (
-						<a href={props.website} target='blank'>
+						<a className={classes.link} href={props.website} target='blank'>
 							{props.website}
 						</a>
 					) : (

@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from 'react';
-import { Grid, Container, TextField } from '@material-ui/core/';
+import { Grid, Container, TextField, InputBase } from '@material-ui/core/';
 import { makeStyles } from '@material-ui/core/styles';
 import Details from '../components/Details';
 import API from '../utils/BreweryAPI';
+import SearchIcon from '@material-ui/icons/Search';
 
 const useStyles = makeStyles((theme) => ({
 	root: {
@@ -12,6 +13,11 @@ const useStyles = makeStyles((theme) => ({
 	background: {
 		backgroundColor: '#606060',
 		minHeight: '100vh',
+	},
+	searchBar: {
+		background: 'transparent',
+		color: '#fff',
+		fontSize: '20px',
 	},
 }));
 
@@ -57,17 +63,13 @@ function Search() {
 						>
 							<Grid item sm={11} lg={8}>
 								<div className={classes.root}>
-									<TextField
-										id='search'
-										style={{ margin: 8 }}
-										placeholder='Search'
-										fullWidth
-										margin='normal'
-										InputLabelProps={{
-											shrink: true,
-										}}
-										onChange={onChange}
-									/>
+									<form>
+										<InputBase
+											onChange={onChange}
+											placeholder='Search…'
+											inputProps={{ 'aria-label': 'search' }}
+										/>
+									</form>
 								</div>
 							</Grid>
 						</Grid>
@@ -89,17 +91,17 @@ function Search() {
 						>
 							<Grid item sm={11} lg={8}>
 								<div className={classes.root}>
-									<TextField
-										id='search'
-										style={{ margin: 8 }}
-										placeholder='Search'
-										fullWidth
-										margin='normal'
-										InputLabelProps={{
-											shrink: true,
-										}}
-										onChange={onChange}
-									/>
+									<form>
+										<InputBase
+											onChange={onChange}
+											placeholder='Search…'
+											classes={{
+												root: classes.inputRoot,
+												input: classes.inputInput,
+											}}
+											inputProps={{ 'aria-label': 'search' }}
+										/>
+									</form>
 								</div>
 							</Grid>
 						</Grid>
