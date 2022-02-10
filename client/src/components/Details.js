@@ -1,50 +1,71 @@
-import React from "react";
-import { makeStyles, useTheme } from "@material-ui/core/styles";
-import clsx from "clsx";
-import Card from "@material-ui/core/Card";
-import CardHeader from "@material-ui/core/CardHeader";
-import CardMedia from "@material-ui/core/CardMedia";
-import CardContent from "@material-ui/core/CardContent";
-import CardActions from "@material-ui/core/CardActions";
-import Collapse from "@material-ui/core/Collapse";
-import Avatar from "@material-ui/core/Avatar";
-import IconButton from "@material-ui/core/IconButton";
-import Typography from "@material-ui/core/Typography";
-import { red } from "@material-ui/core/colors";
-import FavoriteIcon from "@material-ui/icons/Favorite";
-import ShareIcon from "@material-ui/icons/Share";
-import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
-import MoreVertIcon from "@material-ui/icons/MoreVert";
-import WallOfBeers from "../images/wall-of-beers.jpg";
+import React from 'react';
+import { makeStyles, useTheme } from '@material-ui/core/styles';
+import clsx from 'clsx';
+import Card from '@material-ui/core/Card';
+import CardHeader from '@material-ui/core/CardHeader';
+import CardMedia from '@material-ui/core/CardMedia';
+import CardContent from '@material-ui/core/CardContent';
+import CardActions from '@material-ui/core/CardActions';
+import Collapse from '@material-ui/core/Collapse';
+import Avatar from '@material-ui/core/Avatar';
+import IconButton from '@material-ui/core/IconButton';
+import Typography from '@material-ui/core/Typography';
+import { red } from '@material-ui/core/colors';
+import FavoriteIcon from '@material-ui/icons/Favorite';
+import ShareIcon from '@material-ui/icons/Share';
+import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
+import MoreVertIcon from '@material-ui/icons/MoreVert';
+import WallOfBeers from '../images/wall-of-beers.jpg';
 
 const useStyles = makeStyles((theme) => ({
+	components: {
+		// Name of the component
+		MuiTypography: {
+			styleOverrides: {
+				colorTextSecondary: {
+					color: '#ffffff',
+				},
+			},
+		},
+	},
+	typography: {
+		color: '#fff',
+	},
 	root: {
 		width: 800,
-		height: "100%",
+		height: '100%',
 		margin: 15,
-		[theme.breakpoints.down("sm")]: {
+		[theme.breakpoints.down('sm')]: {
 			width: 500,
 		},
-		[theme.breakpoints.down("xs")]: {
+		[theme.breakpoints.down('xs')]: {
 			width: 300,
 		},
+		backgroundColor: '#1f1f1f',
+		outlineColor: '#f1a922',
+		outlineStyle: 'solid',
+		outlineWidth: '2px',
+		color: '#fff',
 	},
 	media: {
 		height: 120,
 		// paddingTop: "56.25%", // 16:9
 	},
 	expand: {
-		transform: "rotate(0deg)",
-		marginLeft: "auto",
-		transition: theme.transitions.create("transform", {
+		transform: 'rotate(0deg)',
+		marginLeft: 'auto',
+		transition: theme.transitions.create('transform', {
 			duration: theme.transitions.duration.shortest,
 		}),
 	},
 	expandOpen: {
-		transform: "rotate(180deg)",
+		transform: 'rotate(180deg)',
 	},
 	avatar: {
 		backgroundColor: red[500],
+	},
+	subheader: {
+		color: '#fff',
 	},
 }));
 
@@ -61,25 +82,29 @@ export default function Details(props) {
 		<Card className={classes.root}>
 			<CardHeader
 				title={props.name}
-				subheader={`${props.city}, ${props.state}`}
+				subheader={
+					<Typography className={classes.subheader}>
+						{props.city}, {props.state}
+					</Typography>
+				}
 			/>
 			{/* <CardMedia className={classes.media} image={WallOfBeers} title="beer" /> */}
 			<CardContent>
-				<Typography variant="body2" color="textSecondary" component="p">
-					Website:{" "}
+				<Typography variant='body2' component='p'>
+					Website:{' '}
 					{props.website ? (
-						<a href={props.website} target="blank">
+						<a href={props.website} target='blank'>
 							{props.website}
 						</a>
 					) : (
-						"N/A"
+						'N/A'
 					)}
 				</Typography>
-				<Typography variant="body2" color="textSecondary" component="p">
-					Address:{" "}
+				<Typography variant='body2' component='p'>
+					Address:{' '}
 					{props.street
 						? `${props.street} - ${props.city}, ${props.state}`
-						: "N/A"}
+						: 'N/A'}
 				</Typography>
 			</CardContent>
 			{/* <CardActions disableSpacing>

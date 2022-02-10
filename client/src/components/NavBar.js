@@ -1,22 +1,22 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import { useAuth0 } from "@auth0/auth0-react";
-import { fade, makeStyles } from "@material-ui/core/styles";
-import AppBar from "@material-ui/core/AppBar";
-import Toolbar from "@material-ui/core/Toolbar";
-import IconButton from "@material-ui/core/IconButton";
-import Typography from "@material-ui/core/Typography";
-import InputBase from "@material-ui/core/InputBase";
-import Badge from "@material-ui/core/Badge";
-import MenuItem from "@material-ui/core/MenuItem";
-import Menu from "@material-ui/core/Menu";
-import AccountCircle from "@material-ui/icons/AccountCircle";
-import AccountThumbnail from "./AccountThumbnail";
-import MailIcon from "@material-ui/icons/Mail";
-import NotificationsIcon from "@material-ui/icons/Notifications";
-import MoreIcon from "@material-ui/icons/MoreVert";
-import LoginButton from "./LoginButton";
-import LogoutButton from "./LogoutButton";
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { useAuth0 } from '@auth0/auth0-react';
+import { fade, makeStyles } from '@material-ui/core/styles';
+import AppBar from '@material-ui/core/AppBar';
+import Toolbar from '@material-ui/core/Toolbar';
+import IconButton from '@material-ui/core/IconButton';
+import Typography from '@material-ui/core/Typography';
+import InputBase from '@material-ui/core/InputBase';
+import Badge from '@material-ui/core/Badge';
+import MenuItem from '@material-ui/core/MenuItem';
+import Menu from '@material-ui/core/Menu';
+import AccountCircle from '@material-ui/icons/AccountCircle';
+import AccountThumbnail from './AccountThumbnail';
+import MailIcon from '@material-ui/icons/Mail';
+import NotificationsIcon from '@material-ui/icons/Notifications';
+import MoreIcon from '@material-ui/icons/MoreVert';
+import LoginButton from './LoginButton';
+import LogoutButton from './LogoutButton';
 
 const useStyles = makeStyles((theme) => ({
 	grow: {
@@ -26,41 +26,44 @@ const useStyles = makeStyles((theme) => ({
 		marginRight: theme.spacing(2),
 	},
 	inputRoot: {
-		color: "inherit",
+		color: 'inherit',
 	},
 	inputInput: {
 		padding: theme.spacing(1, 1, 1, 0),
 		// vertical padding + font size from searchIcon
 		paddingLeft: `calc(1em + ${theme.spacing(4)}px)`,
-		transition: theme.transitions.create("width"),
-		width: "100%",
-		[theme.breakpoints.up("md")]: {
-			width: "20ch",
+		transition: theme.transitions.create('width'),
+		width: '100%',
+		[theme.breakpoints.up('md')]: {
+			width: '20ch',
 		},
 	},
 	sectionDesktop: {
-		display: "none",
-		[theme.breakpoints.up("md")]: {
-			display: "flex",
+		display: 'none',
+		[theme.breakpoints.up('md')]: {
+			display: 'flex',
 		},
 	},
 	sectionMobile: {
-		display: "flex",
-		[theme.breakpoints.up("md")]: {
-			display: "none",
+		display: 'flex',
+		[theme.breakpoints.up('md')]: {
+			display: 'none',
 		},
 	},
 	navLink: {
-		color: "#ffffff",
-		textDecoration: "none",
-		marginRight: "2rem",
-		fontWeight: "500",
-		fontSize: "1.2rem",
+		color: '#ffffff',
+		textDecoration: 'none',
+		marginRight: '2rem',
+		fontWeight: '500',
+		fontSize: '1.2rem',
 	},
 	mobileMenuItem: {
-		margin: "5px",
-		textDecoration: "none",
-		color: "#000000",
+		margin: '5px',
+		textDecoration: 'none',
+		color: '#000000',
+	},
+	brew: {
+		color: '#f1a922',
 	},
 }));
 
@@ -90,7 +93,7 @@ export default function PrimarySearchAppBar() {
 		setMobileMoreAnchorEl(event.currentTarget);
 	};
 
-	const menuId = "primary-search-account-menu";
+	const menuId = 'primary-search-account-menu';
 	// const renderAuthMenu = (
 	// 	<Menu
 	// 		anchorEl={anchorEl}
@@ -134,24 +137,24 @@ export default function PrimarySearchAppBar() {
 	// 	</Menu>
 	// );
 
-	const mobileMenuId = "primary-search-account-menu-mobile";
+	const mobileMenuId = 'primary-search-account-menu-mobile';
 	const renderMobileMenu = (
 		<Menu
 			anchorEl={mobileMoreAnchorEl}
-			anchorOrigin={{ vertical: "top", horizontal: "right" }}
+			anchorOrigin={{ vertical: 'top', horizontal: 'right' }}
 			id={mobileMenuId}
 			keepMounted
-			transformOrigin={{ vertical: "top", horizontal: "right" }}
+			transformOrigin={{ vertical: 'top', horizontal: 'right' }}
 			open={isMobileMenuOpen}
 			onClose={handleMobileMenuClose}
 		>
 			<MenuItem onClick={handleMenuClose}>
-				<Link className={classes.mobileMenuItem} to="/search">
+				<Link className={classes.mobileMenuItem} to='/search'>
 					Find Breweries
 				</Link>
 			</MenuItem>
 			<MenuItem onClick={handleMenuClose}>
-				<Link className={classes.mobileMenuItem} to="/ourpicks">
+				<Link className={classes.mobileMenuItem} to='/ourpicks'>
 					Our Picks
 				</Link>
 			</MenuItem>
@@ -173,41 +176,41 @@ export default function PrimarySearchAppBar() {
 	return (
 		<div className={(classes.grow, classes.toolbar)}>
 			<AppBar
-				position="fixed"
+				position='fixed'
 				style={{
-					backgroundColor: "#000000",
+					backgroundColor: '#000000',
 				}}
 			>
 				<Toolbar>
 					<Link
-						to="/"
+						to='/'
 						style={{
-							color: "#ffffff",
-							textDecoration: "none",
+							color: '#ffffff',
+							textDecoration: 'none',
 						}}
 					>
 						<Typography
 							className={classes.title}
-							variant="h5"
+							variant='h5'
 							noWrap
 							style={{
-								fontFamily: "Zen Dots",
+								fontFamily: 'Zen Dots',
 							}}
 						>
-							BrewCrew
+							<span className={classes.brew}>Brew</span>Crew
 						</Typography>
 					</Link>
 					<div className={classes.grow} />
 					<div
 						className={classes.sectionDesktop}
 						style={{
-							alignItems: "center",
+							alignItems: 'center',
 						}}
 					>
-						<Link className={classes.navLink} to="/search">
+						<Link className={classes.navLink} to='/search'>
 							Find Breweries
 						</Link>
-						<Link className={classes.navLink} to="/ourpicks">
+						<Link className={classes.navLink} to='/ourpicks'>
 							Our Picks
 						</Link>
 						{/* <Link className={classes.navLink} to="/">
@@ -226,11 +229,11 @@ export default function PrimarySearchAppBar() {
 					</div>
 					<div className={classes.sectionMobile}>
 						<IconButton
-							aria-label="show more"
+							aria-label='show more'
 							aria-controls={mobileMenuId}
-							aria-haspopup="true"
+							aria-haspopup='true'
 							onClick={handleMobileMenuOpen}
-							color="inherit"
+							color='inherit'
 						>
 							<MoreIcon />
 						</IconButton>
