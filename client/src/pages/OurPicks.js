@@ -24,15 +24,38 @@ function OurPicks() {
 	// create state - useState
 	const [results, setResults] = useState([]);
 
-	// make a call to API to get some data - useEffect
+	let picks = [];
+
 	useEffect(() => {
-		// make API call here
+		getPickOne();
+		getPickTwo();
+		getPickThree();
+		setResults(picks);
+	}, []);
+
+	function getPickOne() {
 		fetch(
-			'https://api.openbrewerydb.org/breweries?by_state=colorado&by_city=fort_collins&per_page=3'
+			'https://api.openbrewerydb.org/breweries/odell-brewing-co-fort-collins'
 		)
 			.then((res) => res.json())
-			.then((data) => setResults(data));
-	}, []);
+			.then((data) => picks.push(data));
+	}
+
+	function getPickTwo() {
+		fetch(
+			'https://api.openbrewerydb.org/breweries/new-belgium-brewing-co-fort-collins'
+		)
+			.then((res) => res.json())
+			.then((data) => picks.push(data));
+	}
+
+	function getPickThree() {
+		fetch(
+			'https://api.openbrewerydb.org/breweries/breckenridge-brewery-littleton'
+		)
+			.then((res) => res.json())
+			.then((data) => picks.push(data));
+	}
 
 	return (
 		<>
