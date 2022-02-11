@@ -78,7 +78,7 @@ function Search() {
 							<div className={classes.root}>
 								<InputBase
 									onChange={onChange}
-									placeholder='Search breweries…'
+									placeholder='Search breweries by name or location…'
 									inputProps={{
 										'aria-label': 'search',
 									}}
