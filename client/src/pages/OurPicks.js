@@ -19,6 +19,8 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 function OurPicks() {
+	let loading = true;
+
 	const classes = useStyles();
 
 	// create state - useState
@@ -31,6 +33,7 @@ function OurPicks() {
 		getPickTwo();
 		getPickThree();
 		setResults(picks);
+		console.log(picks);
 	}, []);
 
 	function getPickOne() {
