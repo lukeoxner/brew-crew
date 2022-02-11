@@ -11,10 +11,17 @@ const useStyles = makeStyles((theme) => ({
 			background: '#1f1f1f',
 			color: '#fff',
 			fontSize: '20px',
-			padding: '5px',
+			padding: '10px',
+			paddingLeft: '25px',
+			margin: '15px',
+			display: 'block',
+			width: '400px',
+			textAlign: 'center',
+			borderRadius: '15px',
 		},
 		display: 'flex',
 		flexWrap: 'wrap',
+		justifyContent: 'center',
 	},
 	background: {
 		backgroundColor: '#606060',
@@ -64,14 +71,11 @@ function Search() {
 						>
 							<Grid item sm={11} lg={8}>
 								<div className={classes.root}>
-									<form>
-										<InputBase
-											onChange={onChange}
-											className={classes.searchBar}
-											placeholder='Search…'
-											inputProps={{ 'aria-label': 'search' }}
-										/>
-									</form>
+									<InputBase
+										onChange={onChange}
+										placeholder='Search breweries…NO RESULTS...'
+										inputProps={{ 'aria-label': 'search' }}
+									/>
 								</div>
 							</Grid>
 						</Grid>
@@ -93,17 +97,13 @@ function Search() {
 						>
 							<Grid item sm={11} lg={8}>
 								<div className={classes.root}>
-									<form>
-										<InputBase
-											onChange={onChange}
-											placeholder='Search…'
-											classes={{
-												root: classes.inputRoot,
-												input: classes.inputInput,
-											}}
-											inputProps={{ 'aria-label': 'search' }}
-										/>
-									</form>
+									<InputBase
+										onChange={onChange}
+										placeholder='Search breweries…'
+										inputProps={{
+											'aria-label': 'search',
+										}}
+									/>
 								</div>
 							</Grid>
 						</Grid>
