@@ -9,9 +9,10 @@ const useStyles = makeStyles((theme) => ({
 	root: {
 		display: 'flex',
 		flexWrap: 'wrap',
+		color: '#dbdbdb',
 	},
 	background: {
-		backgroundColor: '#606060',
+		backgroundColor: '#303030',
 		minHeight: '100vh',
 	},
 	picksContainer: {
@@ -23,8 +24,8 @@ const useStyles = makeStyles((theme) => ({
 	title: {
 		fontWeight: 500,
 		fontSize: '40px',
-		color: '#fff',
-		// textShadow: '2px 2px #000',
+		color: '#dbdbdb',
+		textShadow: '2px 2px #000',
 	},
 	our: {
 		// color: '#f1a922',

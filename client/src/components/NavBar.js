@@ -51,7 +51,7 @@ const useStyles = makeStyles((theme) => ({
 		},
 	},
 	navLink: {
-		color: '#ffffff',
+		color: '#dbdbdb',
 		textDecoration: 'none',
 		marginRight: '2rem',
 		fontWeight: '500',

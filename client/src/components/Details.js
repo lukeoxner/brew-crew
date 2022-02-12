@@ -19,7 +19,7 @@ import WallOfBeers from '../images/wall-of-beers.jpg';
 
 const useStyles = makeStyles((theme) => ({
 	typography: {
-		color: '#fff',
+		color: '#dbdbdb',
 	},
 	root: {
 		width: 800,
@@ -55,12 +55,12 @@ const useStyles = makeStyles((theme) => ({
 		backgroundColor: red[500],
 	},
 	title: {
-		color: '#fff',
+		color: '#dbdbdb',
 		fontWeight: 500,
 		// fontSize: '30px',
 	},
 	subheader: {
-		color: '#fff',
+		color: '#dbdbdb',
 	},
 	link: {
 		color: '#f1a922',
