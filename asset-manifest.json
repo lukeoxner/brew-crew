@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/brewery-finder/static/css/main.c7cd6275.chunk.css",
-    "main.js": "/brewery-finder/static/js/main.3938e59c.chunk.js",
-    "main.js.map": "/brewery-finder/static/js/main.3938e59c.chunk.js.map",
+    "main.css": "/brewery-finder/static/css/main.c51f39c9.chunk.css",
+    "main.js": "/brewery-finder/static/js/main.f1db23b8.chunk.js",
+    "main.js.map": "/brewery-finder/static/js/main.f1db23b8.chunk.js.map",
     "runtime-main.js": "/brewery-finder/static/js/runtime-main.98133b6f.js",
     "runtime-main.js.map": "/brewery-finder/static/js/runtime-main.98133b6f.js.map",
-    "static/js/2.d5aaf71d.chunk.js": "/brewery-finder/static/js/2.d5aaf71d.chunk.js",
-    "static/js/2.d5aaf71d.chunk.js.map": "/brewery-finder/static/js/2.d5aaf71d.chunk.js.map",
+    "static/js/2.7f7eb00e.chunk.js": "/brewery-finder/static/js/2.7f7eb00e.chunk.js",
+    "static/js/2.7f7eb00e.chunk.js.map": "/brewery-finder/static/js/2.7f7eb00e.chunk.js.map",
     "index.html": "/brewery-finder/index.html",
-    "static/css/main.c7cd6275.chunk.css.map": "/brewery-finder/static/css/main.c7cd6275.chunk.css.map",
-    "static/js/2.d5aaf71d.chunk.js.LICENSE.txt": "/brewery-finder/static/js/2.d5aaf71d.chunk.js.LICENSE.txt",
+    "static/css/main.c51f39c9.chunk.css.map": "/brewery-finder/static/css/main.c51f39c9.chunk.css.map",
+    "static/js/2.7f7eb00e.chunk.js.LICENSE.txt": "/brewery-finder/static/js/2.7f7eb00e.chunk.js.LICENSE.txt",
     "static/media/beer-on-beach.05a7ce2e.jpg": "/brewery-finder/static/media/beer-on-beach.05a7ce2e.jpg",
     "static/media/girls-with-beers.ad1a6d85.jpg": "/brewery-finder/static/media/girls-with-beers.ad1a6d85.jpg",
     "static/media/wall-of-beers.bf24e0c8.jpg": "/brewery-finder/static/media/wall-of-beers.bf24e0c8.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.98133b6f.js",
-    "static/js/2.d5aaf71d.chunk.js",
-    "static/css/main.c7cd6275.chunk.css",
-    "static/js/main.3938e59c.chunk.js"
+    "static/js/2.7f7eb00e.chunk.js",
+    "static/css/main.c51f39c9.chunk.css",
+    "static/js/main.f1db23b8.chunk.js"
   ]
 }
