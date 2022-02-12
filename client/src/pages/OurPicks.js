@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import { Grid, Container } from '@material-ui/core/';
+import { Grid, Container, Typography } from '@material-ui/core/';
 import Details from '../components/Details';
+import Loading from '../components/Loading';
 import { makeStyles } from '@material-ui/core/styles';
 import { mergeClasses } from '@material-ui/styles';
 
@@ -13,27 +14,22 @@ const useStyles = makeStyles((theme) => ({
 		backgroundColor: '#606060',
 		minHeight: '100vh',
 	},
-	searchBar: {
-		background: 'transparent',
+	picksGrid: {
+		paddingTop: '100px',
 	},
 }));
 
 function OurPicks() {
-	let loading = true;
-
 	const classes = useStyles();
 
 	// create state - useState
 	const [results, setResults] = useState([]);
+	const [isBusy, setBusy] = useState(true);
 
 	let picks = [];
 
 	useEffect(() => {
 		getPickOne();
-		getPickTwo();
-		getPickThree();
-		setResults(picks);
-		console.log(picks);
 	}, []);
 
 	function getPickOne() {
@@ -41,7 +37,8 @@ function OurPicks() {
 			'https://api.openbrewerydb.org/breweries/odell-brewing-co-fort-collins'
 		)
 			.then((res) => res.json())
-			.then((data) => picks.push(data));
+			.then((data) => picks.push(data))
+			.then(() => getPickTwo());
 	}
 
 	function getPickTwo() {
@@ -49,7 +46,8 @@ function OurPicks() {
 			'https://api.openbrewerydb.org/breweries/new-belgium-brewing-co-fort-collins'
 		)
 			.then((res) => res.json())
-			.then((data) => picks.push(data));
+			.then((data) => picks.push(data))
+			.then(() => getPickThree());
 	}
 
 	function getPickThree() {
@@ -57,30 +55,48 @@ function OurPicks() {
 			'https://api.openbrewerydb.org/breweries/breckenridge-brewery-littleton'
 		)
 			.then((res) => res.json())
-			.then((data) => picks.push(data));
+			.then((data) => picks.push(data))
+			.then(() => makeResults());
+	}
+
+	function makeResults() {
+		setResults(picks);
+		setBusy(false);
 	}
 
 	return (
 		<>
 			<div className={classes.background}>
-				<h1>Our Picks</h1>
 				<Container>
-					<Grid container direction='row' justify='center' alignItems='center'>
-						{results.map((result) => (
-							<Grid item key={result.id}>
-								<Details
-									id={result.id}
-									key={result.id}
-									name={result.name}
-									street={result.street}
-									city={result.city}
-									state={result.state}
-									website={result.website_url}
-									type={result.brewery_type}
-								/>
+					{isBusy ? (
+						<Loading />
+					) : (
+						<Container className={classes.picksGrid}>
+							<Typography>Our Picks</Typography>
+							<Grid
+								container
+								direction='row'
+								justify='center'
+								alignItems='center'
+							>
+								{results &&
+									results.map((result) => (
+										<Grid item key={result.id}>
+											<Details
+												id={result.id}
+												key={result.id}
+												name={result.name}
+												street={result.street}
+												city={result.city}
+												state={result.state}
+												website={result.website_url}
+												type={result.brewery_type}
+											/>
+										</Grid>
+									))}
 							</Grid>
-						))}
-					</Grid>
+						</Container>
+					)}
 				</Container>
 			</div>
 		</>
