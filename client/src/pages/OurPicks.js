@@ -14,8 +14,20 @@ const useStyles = makeStyles((theme) => ({
 		backgroundColor: '#606060',
 		minHeight: '100vh',
 	},
+	picksContainer: {
+		paddingTop: '110px',
+	},
 	picksGrid: {
-		paddingTop: '100px',
+		paddingTop: '30px',
+	},
+	title: {
+		fontWeight: 500,
+		fontSize: '40px',
+		color: '#fff',
+		// textShadow: '2px 2px #000',
+	},
+	our: {
+		// color: '#f1a922',
 	},
 }));
 
@@ -71,13 +83,16 @@ function OurPicks() {
 					{isBusy ? (
 						<Loading />
 					) : (
-						<Container className={classes.picksGrid}>
-							<Typography>Our Picks</Typography>
+						<Container className={classes.picksContainer}>
+							<Typography className={classes.title} align='center' variant='h4'>
+								<span className={classes.our}>Our</span> Favorite Breweries
+							</Typography>
 							<Grid
 								container
 								direction='row'
 								justify='center'
 								alignItems='center'
+								className={classes.picksGrid}
 							>
 								{results &&
 									results.map((result) => (
