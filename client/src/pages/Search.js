@@ -56,10 +56,10 @@ const useStyles = makeStyles((theme) => ({
 		borderRadius: '15px',
 	},
 	icon: {
-		fontSize: '30px',
 		height: '100%',
-		stroke: '#fff',
-		strokeOpacity: '70%',
+		// fontSize: '30px',
+		// stroke: '#fff',
+		// strokeOpacity: '70%',
 	},
 }));
 
