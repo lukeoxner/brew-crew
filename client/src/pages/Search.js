@@ -8,24 +8,27 @@ import SearchIcon from '@material-ui/icons/Search';
 const useStyles = makeStyles((theme) => ({
 	root: {
 		'& .MuiInputBase-root': {
+			gridColumn: 1,
+			gridRow: 1,
 			background: '#1f1f1f',
 			color: '#fff',
 			// fontSize: '20px',
 			padding: '10px',
 			paddingLeft: '25px',
-			marginTop: '15px',
-			marginBottom: '15px',
 			display: 'block',
 			width: '100%',
-			textAlign: 'center',
 			// outlineColor: '#bdbdbd',
 			// outlineStyle: 'solid',
 			// outlineWidth: '1px',
 			borderRadius: '15px',
 			boxShadow: '0px 4px 10px #000',
+			zIndex: 0,
 		},
-		display: 'flex',
-		flexWrap: 'wrap',
+		// display: 'flex',
+		// flexWrap: 'wrap',
+		display: 'grid',
+		marginTop: '15px',
+		marginBottom: '15px',
 	},
 	background: {
 		backgroundColor: '#303030',
@@ -36,6 +39,27 @@ const useStyles = makeStyles((theme) => ({
 	},
 	searchGrid: {
 		paddingTop: '100px',
+	},
+	searchIcon: {
+		gridColumn: 1,
+		gridRow: 1,
+		padding: theme.spacing(0, 2),
+		height: '100%',
+		pointerEvents: 'none',
+		zIndex: 1,
+		color: '#f1a922',
+		// color: '#dbdbdb',
+		backgroundColor: '#171717',
+		width: '25px',
+		justifySelf: 'end',
+		height: '100%',
+		borderRadius: '15px',
+	},
+	icon: {
+		fontSize: '30px',
+		height: '100%',
+		stroke: '#fff',
+		strokeOpacity: '70%',
 	},
 }));
 
@@ -77,9 +101,12 @@ function Search() {
 					>
 						<Grid item xs={10} sm={6} lg={4}>
 							<div className={classes.root}>
+								<div className={classes.searchIcon}>
+									<SearchIcon className={classes.icon} />
+								</div>
 								<InputBase
 									onChange={onChange}
-									placeholder='Search breweries by name or location…'
+									placeholder='Search breweries...'
 									inputProps={{
 										'aria-label': 'search',
 									}}
@@ -103,7 +130,7 @@ function Search() {
 										/>
 									</Grid>
 							  ))
-							: console.log('yo')}
+							: console.log('No results')}
 					</Grid>
 				</Container>
 			</div>
