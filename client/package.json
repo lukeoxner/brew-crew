@@ -2,7 +2,7 @@
   "name": "brewcrew",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://lukeoxner.github.io/brewery-finder",
+  "homepage": "https://lukeoxner.github.io/brew-crew",
   "dependencies": {
     "@auth0/auth0-react": "^1.4.0",
     "@material-ui/core": "^4.11.4",
