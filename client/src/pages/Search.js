@@ -5,7 +5,7 @@ import {
 	TextField,
 	InputBase,
 	Typography,
-} from '@material-ui/core/';
+} from '@material-ui/core';
 import { makeStyles, withStyles } from '@material-ui/core/styles';
 import Details from '../components/Details';
 import API from '../utils/BreweryAPI';
@@ -18,20 +18,14 @@ const useStyles = makeStyles((theme) => ({
 			gridRow: 1,
 			background: '#1f1f1f',
 			color: '#fff',
-			// fontSize: '20px',
 			padding: '10px',
 			paddingLeft: '25px',
 			display: 'block',
 			width: '100%',
-			// outlineColor: '#bdbdbd',
-			// outlineStyle: 'solid',
-			// outlineWidth: '1px',
 			borderRadius: '15px',
 			boxShadow: '0px 4px 10px #000',
 			zIndex: 0,
 		},
-		// display: 'flex',
-		// flexWrap: 'wrap',
 		display: 'grid',
 		marginTop: '15px',
 		marginBottom: '15px',
@@ -57,7 +51,6 @@ const useStyles = makeStyles((theme) => ({
 		pointerEvents: 'none',
 		zIndex: 1,
 		color: '#f1a922',
-		// color: '#dbdbdb',
 		backgroundColor: '#171717',
 		width: '25px',
 		justifySelf: 'end',
@@ -66,9 +59,6 @@ const useStyles = makeStyles((theme) => ({
 	},
 	icon: {
 		height: '100%',
-		// fontSize: '30px',
-		// stroke: '#fff',
-		// strokeOpacity: '70%',
 	},
 	title: {
 		fontWeight: 500,
@@ -116,9 +106,6 @@ function Search() {
 		<>
 			<div className={classes.background}>
 				<Container className={classes.searchContainer}>
-					{/* <Typography className={classes.title} align='center' variant='h4'>
-						Find your new favorite brewery!
-					</Typography> */}
 					<Typography className={classes.intro} align='center'>
 						Find your new favorite breweries by name or location
 					</Typography>

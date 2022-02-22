@@ -57,7 +57,6 @@ const useStyles = makeStyles((theme) => ({
 	title: {
 		color: '#dbdbdb',
 		fontWeight: 500,
-		// fontSize: '30px',
 	},
 	subheader: {
 		color: '#dbdbdb',
@@ -90,7 +89,6 @@ export default function Details(props) {
 					</Typography>
 				}
 			/>
-			{/* <CardMedia className={classes.media} image={WallOfBeers} title="beer" /> */}
 			<CardContent>
 				<Typography variant='body2' component='p'>
 					Website:{' '}
@@ -109,29 +107,6 @@ export default function Details(props) {
 						: 'N/A'}
 				</Typography>
 			</CardContent>
-			{/* <CardActions disableSpacing>
-				<IconButton aria-label="add to favorites">
-					<FavoriteIcon />
-				</IconButton>
-				<IconButton aria-label="share">
-					<ShareIcon />
-				</IconButton>
-				<IconButton
-					className={clsx(classes.expand, {
-						[classes.expandOpen]: expanded,
-					})}
-					onClick={handleExpandClick}
-					aria-expanded={expanded}
-					aria-label="show more"
-				>
-					<ExpandMoreIcon />
-				</IconButton>
-			</CardActions> */}
-			{/* <Collapse in={expanded} timeout="auto" unmountOnExit>
-				<CardContent>
-					<Typography paragraph>Brewery info here!</Typography>
-				</CardContent>
-			</Collapse> */}
 		</Card>
 	);
 }
