@@ -1,21 +1,21 @@
 {
   "files": {
-    "main.css": "/brewery-finder/static/css/main.c51f39c9.chunk.css",
-    "main.js": "/brewery-finder/static/js/main.4ac55adb.chunk.js",
-    "main.js.map": "/brewery-finder/static/js/main.4ac55adb.chunk.js.map",
-    "runtime-main.js": "/brewery-finder/static/js/runtime-main.98133b6f.js",
-    "runtime-main.js.map": "/brewery-finder/static/js/runtime-main.98133b6f.js.map",
-    "static/js/2.970a52dc.chunk.js": "/brewery-finder/static/js/2.970a52dc.chunk.js",
-    "static/js/2.970a52dc.chunk.js.map": "/brewery-finder/static/js/2.970a52dc.chunk.js.map",
-    "index.html": "/brewery-finder/index.html",
-    "static/css/main.c51f39c9.chunk.css.map": "/brewery-finder/static/css/main.c51f39c9.chunk.css.map",
-    "static/js/2.970a52dc.chunk.js.LICENSE.txt": "/brewery-finder/static/js/2.970a52dc.chunk.js.LICENSE.txt",
-    "static/media/beer-on-beach.05a7ce2e.jpg": "/brewery-finder/static/media/beer-on-beach.05a7ce2e.jpg",
-    "static/media/girls-with-beers.ad1a6d85.jpg": "/brewery-finder/static/media/girls-with-beers.ad1a6d85.jpg",
-    "static/media/wall-of-beers.bf24e0c8.jpg": "/brewery-finder/static/media/wall-of-beers.bf24e0c8.jpg"
+    "main.css": "/brew-crew/static/css/main.c51f39c9.chunk.css",
+    "main.js": "/brew-crew/static/js/main.4ac55adb.chunk.js",
+    "main.js.map": "/brew-crew/static/js/main.4ac55adb.chunk.js.map",
+    "runtime-main.js": "/brew-crew/static/js/runtime-main.df25f8ff.js",
+    "runtime-main.js.map": "/brew-crew/static/js/runtime-main.df25f8ff.js.map",
+    "static/js/2.970a52dc.chunk.js": "/brew-crew/static/js/2.970a52dc.chunk.js",
+    "static/js/2.970a52dc.chunk.js.map": "/brew-crew/static/js/2.970a52dc.chunk.js.map",
+    "index.html": "/brew-crew/index.html",
+    "static/css/main.c51f39c9.chunk.css.map": "/brew-crew/static/css/main.c51f39c9.chunk.css.map",
+    "static/js/2.970a52dc.chunk.js.LICENSE.txt": "/brew-crew/static/js/2.970a52dc.chunk.js.LICENSE.txt",
+    "static/media/beer-on-beach.05a7ce2e.jpg": "/brew-crew/static/media/beer-on-beach.05a7ce2e.jpg",
+    "static/media/girls-with-beers.ad1a6d85.jpg": "/brew-crew/static/media/girls-with-beers.ad1a6d85.jpg",
+    "static/media/wall-of-beers.bf24e0c8.jpg": "/brew-crew/static/media/wall-of-beers.bf24e0c8.jpg"
   },
   "entrypoints": [
-    "static/js/runtime-main.98133b6f.js",
+    "static/js/runtime-main.df25f8ff.js",
     "static/js/2.970a52dc.chunk.js",
     "static/css/main.c51f39c9.chunk.css",
     "static/js/main.4ac55adb.chunk.js"
