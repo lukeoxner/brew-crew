@@ -1,5 +1,11 @@
 import React, { useEffect, useState } from 'react';
-import { Grid, Container, TextField, InputBase } from '@material-ui/core/';
+import {
+	Grid,
+	Container,
+	TextField,
+	InputBase,
+	Typography,
+} from '@material-ui/core/';
 import { makeStyles, withStyles } from '@material-ui/core/styles';
 import Details from '../components/Details';
 import API from '../utils/BreweryAPI';
@@ -37,8 +43,11 @@ const useStyles = makeStyles((theme) => ({
 	header: {
 		textAlign: 'center',
 	},
-	searchGrid: {
+	searchContainer: {
 		paddingTop: '100px',
+	},
+	searchGrid: {
+		paddingTop: '30px',
 	},
 	searchIcon: {
 		gridColumn: 1,
@@ -60,6 +69,21 @@ const useStyles = makeStyles((theme) => ({
 		// fontSize: '30px',
 		// stroke: '#fff',
 		// strokeOpacity: '70%',
+	},
+	title: {
+		fontWeight: 500,
+		fontSize: '40px',
+		color: '#dbdbdb',
+		textShadow: '2px 2px #000',
+	},
+	intro: {
+		// color: '#f1a922',
+		fontWeight: 400,
+		fontSize: '20px',
+		fontStyle: 'italic',
+		color: '#dbdbdb',
+		textShadow: '1px 1px #000',
+		paddingTop: '15px',
 	},
 }));
 
@@ -91,7 +115,13 @@ function Search() {
 	return (
 		<>
 			<div className={classes.background}>
-				<Container>
+				<Container className={classes.searchContainer}>
+					<Typography className={classes.title} align='center' variant='h4'>
+						Find Your New Favorite Brewery!
+					</Typography>
+					<Typography className={classes.intro} align='center'>
+						Use the search bar below to find breweries by name or location.
+					</Typography>
 					<Grid
 						container
 						direction='row'
