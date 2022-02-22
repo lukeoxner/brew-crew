@@ -116,11 +116,11 @@ function Search() {
 		<>
 			<div className={classes.background}>
 				<Container className={classes.searchContainer}>
-					<Typography className={classes.title} align='center' variant='h4'>
-						Find Your New Favorite Brewery!
-					</Typography>
+					{/* <Typography className={classes.title} align='center' variant='h4'>
+						Find your new favorite brewery!
+					</Typography> */}
 					<Typography className={classes.intro} align='center'>
-						Use the search bar below to find breweries by name or location.
+						Find your new favorite breweries by name or location
 					</Typography>
 					<Grid
 						container
