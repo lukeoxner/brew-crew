@@ -1,6 +1,6 @@
 # BrewCrew
 
-![screenshot of website](./client/src/images/initial-screenshot.png)
+![screenshot of website](./client/src/images/brewcrew-ss.png)
 
 ## Description
 
