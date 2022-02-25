@@ -217,7 +217,6 @@ export default function PrimarySearchAppBar() {
 						<Link className={classes.navLink} to='/ourpicks'>
 							Our Picks
 						</Link>
-						// * User account button (future dev)
 						{/* <IconButton
 							edge="end"
 							aria-label="account of current user"
