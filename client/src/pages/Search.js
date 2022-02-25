@@ -96,7 +96,6 @@ function Search() {
 	}, [searchTerm]);
 
 	const onChange = (e) => {
-		// console.log(`e.target.value: ${e.target.value}`);
 		let searchInput = e.target.value;
 		let formattedSearchInput = searchInput.replace(' ', '_');
 		setSearchTerm(formattedSearchInput);

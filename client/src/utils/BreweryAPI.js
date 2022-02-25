@@ -1,8 +1,6 @@
-// TO BE USED FOR FUTURE DEV
+// *** Not currently used - will likely change to using this file in future dev ***
 
-import axios from "axios";
-
-// Export an object containing methods we'll use for accessing the Brewery API
+import axios from 'axios';
 
 export default {
 	search: function (query) {
@@ -23,6 +21,6 @@ export default {
 		fetch(`https://api.openbrewerydb.org/breweries?by_state=${state}`);
 	},
 	getAll: function () {
-		return axios.get("https://api.openbrewerydb.org/breweries?per_page=25");
+		return axios.get('https://api.openbrewerydb.org/breweries?per_page=25');
 	},
 };

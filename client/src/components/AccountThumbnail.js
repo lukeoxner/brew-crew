@@ -1,3 +1,5 @@
+// *** USER AUTHENTICATION FEATURES NOT USED FOR MVP - WILL BE ADDED IN FUTURE DEVELOPMENT ***
+
 import React from 'react';
 import AccountCircle from '@material-ui/icons/AccountCircle';
 import { useAuth0 } from '@auth0/auth0-react';

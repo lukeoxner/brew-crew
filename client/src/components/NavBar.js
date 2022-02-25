@@ -1,3 +1,5 @@
+// *** USER AUTHENTICATION FEATURES NOT USED FOR MVP - WILL BE ADDED IN FUTURE DEVELOPMENT ***
+
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { useAuth0 } from '@auth0/auth0-react';
@@ -94,6 +96,7 @@ export default function PrimarySearchAppBar() {
 	};
 
 	const menuId = 'primary-search-account-menu';
+	// * Menu that will be rendered for users when logged in (future dev)
 	// const renderAuthMenu = (
 	// 	<Menu
 	// 		anchorEl={anchorEl}
@@ -158,6 +161,7 @@ export default function PrimarySearchAppBar() {
 					Our Picks
 				</Link>
 			</MenuItem>
+			// * User profile option for mobile menu (future dev)
 			{/* <MenuItem onClick={handleProfileMenuOpen}>
 				<IconButton
 					edge="end"
@@ -213,9 +217,7 @@ export default function PrimarySearchAppBar() {
 						<Link className={classes.navLink} to='/ourpicks'>
 							Our Picks
 						</Link>
-						{/* <Link className={classes.navLink} to="/">
-							About
-						</Link> */}
+						// * User account button (future dev)
 						{/* <IconButton
 							edge="end"
 							aria-label="account of current user"

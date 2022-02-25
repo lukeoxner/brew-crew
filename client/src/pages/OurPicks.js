@@ -27,9 +27,6 @@ const useStyles = makeStyles((theme) => ({
 		color: '#dbdbdb',
 		textShadow: '2px 2px #000',
 	},
-	our: {
-		// color: '#f1a922',
-	},
 }));
 
 function OurPicks() {
@@ -86,7 +83,7 @@ function OurPicks() {
 					) : (
 						<Container className={classes.picksContainer}>
 							<Typography className={classes.title} align='center' variant='h4'>
-								<span className={classes.our}>Our</span> Favorite Breweries
+								Our Favorite Breweries
 							</Typography>
 							<Grid
 								container

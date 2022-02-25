@@ -1,14 +1,16 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import { useAuth0 } from "@auth0/auth0-react";
-import { makeStyles } from "@material-ui/core";
+// *** USER AUTHENTICATION FEATURES NOT USED FOR MVP - WILL BE ADDED IN FUTURE DEVELOPMENT ***
+
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { useAuth0 } from '@auth0/auth0-react';
+import { makeStyles } from '@material-ui/core';
 
 const useStyles = makeStyles(() => ({
 	login: {
-		cursor: "pointer",
-		color: "#000000",
-		margin: "5px",
-		textDecoration: "none",
+		cursor: 'pointer',
+		color: '#000000',
+		margin: '5px',
+		textDecoration: 'none',
 	},
 }));
 
