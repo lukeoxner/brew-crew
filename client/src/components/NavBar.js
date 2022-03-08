@@ -161,7 +161,6 @@ export default function PrimarySearchAppBar() {
 					Our Picks
 				</Link>
 			</MenuItem>
-			// * User profile option for mobile menu (future dev)
 			{/* <MenuItem onClick={handleProfileMenuOpen}>
 				<IconButton
 					edge="end"
