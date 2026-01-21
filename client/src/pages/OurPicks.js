@@ -53,7 +53,7 @@ function OurPicks() {
 
 	function getPickTwo() {
 		fetch(
-			'https://api.openbrewerydb.org/v1/breweries/63fd2c11-5530-4de9-8fe2-8fbf65e3a49f',
+			'https://api.openbrewerydb.org/v1/breweries/1b0bf444-c830-4958-922c-5c1b46fe37f5',
 		)
 			.then((res) => res.json())
 			.then((data) => picks.push(data))
@@ -62,7 +62,7 @@ function OurPicks() {
 
 	function getPickThree() {
 		fetch(
-			'https://api.openbrewerydb.org/v1/breweries/63fd2c11-5530-4de9-8fe2-8fbf65e3a49f',
+			'https://api.openbrewerydb.org/v1/breweries/74633f8b-4260-42f5-8c1d-04eda70a2ecb',
 		)
 			.then((res) => res.json())
 			.then((data) => picks.push(data))
