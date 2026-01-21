@@ -44,7 +44,7 @@ function OurPicks() {
 
 	function getPickOne() {
 		fetch(
-			'https://api.openbrewerydb.org/breweries/odell-brewing-co-fort-collins'
+			'https://api.openbrewerydb.org/v1/breweries/63fd2c11-5530-4de9-8fe2-8fbf65e3a49f',
 		)
 			.then((res) => res.json())
 			.then((data) => picks.push(data))
@@ -53,7 +53,7 @@ function OurPicks() {
 
 	function getPickTwo() {
 		fetch(
-			'https://api.openbrewerydb.org/breweries/new-belgium-brewing-co-fort-collins'
+			'https://api.openbrewerydb.org/v1/breweries/63fd2c11-5530-4de9-8fe2-8fbf65e3a49f',
 		)
 			.then((res) => res.json())
 			.then((data) => picks.push(data))
@@ -62,7 +62,7 @@ function OurPicks() {
 
 	function getPickThree() {
 		fetch(
-			'https://api.openbrewerydb.org/breweries/breckenridge-brewery-littleton'
+			'https://api.openbrewerydb.org/v1/breweries/63fd2c11-5530-4de9-8fe2-8fbf65e3a49f',
 		)
 			.then((res) => res.json())
 			.then((data) => picks.push(data))

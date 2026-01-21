@@ -87,11 +87,14 @@ function Search() {
 	// make a call to API to get some data - useEffect
 	useEffect(() => {
 		fetch(
-			`https://api.openbrewerydb.org/breweries/search?query=${searchTerm}&per_page=25`
+			`https://api.openbrewerydb.org/v1/breweries/search?query=${searchTerm}&per_page=25`,
 		)
 			.then((res) => res.json())
 			.then(function (data) {
 				setResults(data);
+			})
+			.catch((err) => {
+				// doing nothing because of weird API error behavior with empty search string
 			});
 	}, [searchTerm]);
 
@@ -145,7 +148,7 @@ function Search() {
 											type={result.brewery_type}
 										/>
 									</Grid>
-							  ))
+								))
 							: console.log('No results')}
 					</Grid>
 				</Container>
